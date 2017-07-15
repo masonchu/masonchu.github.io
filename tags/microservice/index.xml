@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microservice on Strange Case Hugo Theme</title>
+    <link>https://masonchu.github.io/tags/microservice/</link>
+    <description>Recent content in Microservice on Strange Case Hugo Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Thu, 06 Jul 2017 12:00:51 +0800</lastBuildDate>
+    
+	<atom:link href="https://masonchu.github.io/tags/microservice/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Microservice 資料庫規劃</title>
+      <link>https://masonchu.github.io/post/microservice-database-architecture/</link>
+      <pubDate>Thu, 06 Jul 2017 12:00:51 +0800</pubDate>
+      
+      <guid>https://masonchu.github.io/post/microservice-database-architecture/</guid>
+      <description>Pattern: Database per service http://microservices.io/patterns/data/database-per-service.html</description>
+    </item>
+    
+    <item>
+      <title>Golang 實作 Microservice 架構</title>
+      <link>https://masonchu.github.io/post/golang-microservice/</link>
+      <pubDate>Wed, 05 Jul 2017 15:52:11 +0800</pubDate>
+      
+      <guid>https://masonchu.github.io/post/golang-microservice/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
