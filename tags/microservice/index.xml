@@ -1,32 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Microservice on Strange Case Hugo Theme</title>
+    <title>Microservice on Mason Chu</title>
     <link>https://masonchu.github.io/tags/microservice/</link>
-    <description>Recent content in Microservice on Strange Case Hugo Theme</description>
+    <description>Recent content in Microservice on Mason Chu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 06 Jul 2017 12:00:51 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 21 Jun 2018 15:53:16 +0800</lastBuildDate>
     
 	<atom:link href="https://masonchu.github.io/tags/microservice/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Microservice 資料庫規劃</title>
-      <link>https://masonchu.github.io/post/microservice-database-architecture/</link>
-      <pubDate>Thu, 06 Jul 2017 12:00:51 +0800</pubDate>
+      <title>安裝和啟用 NSQ 服務</title>
+      <link>https://masonchu.github.io/post/install-and-start-nsq/</link>
+      <pubDate>Thu, 21 Jun 2018 15:53:16 +0800</pubDate>
       
-      <guid>https://masonchu.github.io/post/microservice-database-architecture/</guid>
-      <description>Pattern: Database per service http://microservices.io/patterns/data/database-per-service.html</description>
-    </item>
-    
-    <item>
-      <title>Golang 實作 Microservice 架構</title>
-      <link>https://masonchu.github.io/post/golang-microservice/</link>
-      <pubDate>Wed, 05 Jul 2017 15:52:11 +0800</pubDate>
-      
-      <guid>https://masonchu.github.io/post/golang-microservice/</guid>
-      <description></description>
+      <guid>https://masonchu.github.io/post/install-and-start-nsq/</guid>
+      <description> 安裝 NSQ NSQ 本身有提供 brew / docker 版本。在這邊我是直接使用 github 原始碼下載編譯，注意 golang 1.7+ 並且已經有 dep 套件管理。在 test.sh 會執行 golang test &amp;amp; 編譯出所有的可執行檔。
+下載 source code &amp;amp; 安裝相依性套件 git clone https://github.com/nsqio/nsq $GOPATH/src/github.com/nsqio/nsq cd $GOPATH/src/github.com/nsqio/nsq dep ensure  測試 &amp;amp; 編譯 ./test.sh  安裝到 $GOPATH/bin go install ./apps/nsqlookupd go install ./apps/nsqd go install ./apps/nsqadmin  依序啟動服務 nsqlookupd 預設監聽 http:4161 / tcp:4160，而 nsqd 啟動時自動到 nsqlookupd 註冊。
+nsqlookupd nsqd --lookupd-tcp-address=127.0.0.1:4160 nsqadmin --lookupd-http-address=127.0.0.1:4161  </description>
     </item>
     
   </channel>

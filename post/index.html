@@ -47,6 +47,8 @@
 			<p>Recent Posts:</p>
 			<ul>
 				
+				<li><a href="https://masonchu.github.io/post/install-and-start-nsq/">安裝和啟用 NSQ 服務</a></li>
+				
 				<li><a href="https://masonchu.github.io/post/first-hugo/">第一次使用 Hugo 就上手</a></li>
 				
 				<li><a href="https://masonchu.github.io/categories/">Categories</a></li>
@@ -54,8 +56,6 @@
 				<li><a href="https://masonchu.github.io/tags/hugo/">Hugo</a></li>
 				
 				<li><a href="https://masonchu.github.io/">Mason Chu</a></li>
-				
-				<li><a href="https://masonchu.github.io/post/">Posts</a></li>
 				
 			</ul>
 		</div>
@@ -69,6 +69,52 @@
 			</div>
 			<div class="col-sm-7 col-sm-offset-4 col-md-6 col-md-offset-3 col-lg-5 col-lg-offset-3 content">
 
+				
+				<div class="post">
+
+					<div class="post-heading">
+						<h1><a href="https://masonchu.github.io/post/install-and-start-nsq/">安裝和啟用 NSQ 服務</a></h1>
+						<span>2018/06/21</span>
+					</div>
+
+					
+
+<!-- # 使用 NSQ -->
+
+<h2 id="安裝-nsq">安裝 NSQ</h2>
+
+<p>NSQ 本身有提供 brew / docker 版本。在這邊我是直接使用 github 原始碼下載編譯，注意 golang 1.7+ 並且已經有 dep 套件管理。在 test.sh 會執行 golang test &amp; 編譯出所有的可執行檔。</p>
+
+<h3 id="下載-source-code-安裝相依性套件">下載 source code &amp; 安裝相依性套件</h3>
+
+<pre><code>git clone https://github.com/nsqio/nsq $GOPATH/src/github.com/nsqio/nsq
+cd $GOPATH/src/github.com/nsqio/nsq
+dep ensure
+</code></pre>
+
+<h3 id="測試-編譯">測試 &amp; 編譯</h3>
+
+<pre><code>./test.sh
+</code></pre>
+
+<h3 id="安裝到-gopath-bin">安裝到 $GOPATH/bin</h3>
+
+<pre><code>go install ./apps/nsqlookupd
+go install ./apps/nsqd
+go install ./apps/nsqadmin
+</code></pre>
+
+<h3 id="依序啟動服務">依序啟動服務</h3>
+
+<p>nsqlookupd 預設監聽 http:4161 / tcp:4160，而 nsqd 啟動時自動到 nsqlookupd 註冊。</p>
+
+<pre><code>nsqlookupd
+nsqd --lookupd-tcp-address=127.0.0.1:4160
+nsqadmin --lookupd-http-address=127.0.0.1:4161
+</code></pre>
+
+
+				</div>
 				
 				<div class="post">
 
