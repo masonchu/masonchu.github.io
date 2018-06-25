@@ -26,6 +26,7 @@
  如果想要取得流量或讀者留言需要註冊其他服務  第一次安裝 如果是 mac OS 只要執行
 brew install hugo  就可以直接安裝完成，之後進入選定好儲存檔案的目錄下
 hugo new site &amp;lt;SiteName&amp;gt;  就會建立出預設的檔案目錄
+建議第一篇 post hugo new post/my-first-post.md  建立後的 md 檔案產生在 content/post 目錄
 選擇 Theme 挑選寫作工具 常用指令 // 建立可以發佈的靜態檔案 hugo // 建立 local 端 server 連同草稿 hugo server --buildDrafts  Hugo 官網說明文件 https://gohugo.</description>
     </item>
     
