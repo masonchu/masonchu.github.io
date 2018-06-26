@@ -84,7 +84,7 @@
 
 <!-- # 使用 NSQ -->
 
-<h2 id="安裝-nsq">安裝 NSQ</h2>
+<h2 id="安裝-nsq-在本機測試環境">安裝 NSQ 在本機測試環境</h2>
 
 <p>NSQ 本身有提供 brew / docker 版本。在這邊我是直接使用 github 原始碼下載編譯，注意 golang 1.7+ 並且已經有 dep 套件管理。在 test.sh 會執行 golang test &amp; 編譯出所有的可執行檔。</p>
 
@@ -100,11 +100,18 @@ dep ensure
 <pre><code>./test.sh
 </code></pre>
 
-<h3 id="安裝到-gopath-bin">安裝到 $GOPATH/bin</h3>
-
-<pre><code>go install ./apps/nsqlookupd
+<!-- ### 安裝到 $GOPATH/bin
+```
+go install ./apps/nsqlookupd
 go install ./apps/nsqd
 go install ./apps/nsqadmin
+``` -->
+
+<h3 id="安裝-nsq">安裝 NSQ</h3>
+
+<p>安裝至 /usr/local/bin 目錄</p>
+
+<pre><code>make install
 </code></pre>
 
 <h3 id="依序啟動服務">依序啟動服務</h3>
@@ -115,6 +122,23 @@ go install ./apps/nsqadmin
 nsqd --lookupd-tcp-address=127.0.0.1:4160
 nsqadmin --lookupd-http-address=127.0.0.1:4161
 </code></pre>
+
+<h2 id="使用-go-nsq-發布與接受訊息">使用 go-nsq 發布與接受訊息</h2>
+
+<h2 id="發佈-環境配置">發佈環境配置</h2>
+
+<p>使用在 microservices 中時候，nsqd 建議並不是全部 services 共用，而是個別配置一個 localhost 的 nsqd 註冊到 nsqlookupd。
+&gt; You may have your nsqds and nsqlookupds segregated so that all nodes are good candidates (we do this also), but this isn&rsquo;t a requirement. nsqlookupd can handle several nsqd &ldquo;clusters&rdquo; with distinct responsibilities, like a service discovery service.</p>
+
+<blockquote>
+<p>When you get the nodes back you&rsquo;ll have to make a decision about which node you want to publish to. In our setup we either publish to localhost if nsqd is on the same box or a VIP.</p>
+
+<h2 id="reference">Reference</h2>
+
+<p><code>PRODUCTION CONFIGURATION</code><a href="https://nsq.io/deployment/production.html">https://nsq.io/deployment/production.html</a><br />
+<code>NewProducer and nslookupd</code><a href="https://github.com/nsqio/go-nsq/issues/170">https://github.com/nsqio/go-nsq/issues/170</a>
+<a href="https://segmentfault.com/a/1190000009194607">https://segmentfault.com/a/1190000009194607</a></p>
+</blockquote>
 
 
 			</div>
