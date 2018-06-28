@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -6,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="generator" content="Hugo 0.41" />
 	
-	<title>Hugo - Build Awesome Things</title>
+	<title>使用 GVM 管理 go 版本 - Build Awesome Things</title>
 
 	
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
@@ -23,9 +24,9 @@
 </head>
 <body class="scheme-lightbrown">
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-4 col-md-3 col-lg-3 sidebar">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-4 col-md-3 col-lg-3 sidebar">
 
 			
 	<div class="sidebar-content">
@@ -66,87 +67,82 @@
 	</div>
 
 
-			</div>
-			<div class="col-sm-7 col-sm-offset-4 col-md-6 col-md-offset-3 col-lg-5 col-lg-offset-3 content">
+		</div>
+		<div class="col-sm-7 col-sm-offset-4 col-md-6 col-md-offset-3 col-lg-8 col-lg-offset-3 content">
+
+			<div class="post">
+
+				<div class="post-heading">
+					<h1>使用 GVM 管理 go 版本</h1>
+					<span class="post-date"><a href="https://masonchu.github.io/post/gvm-go-version/">2018/06/25</a></span>					
+					
+					<span class="post-tag small"><a href="https://masonchu.github.io/tags/golang/">#golang</a></span> 
+					
+				</div>
 
 				
-				<div class="post">
-
-					<div class="post-heading">
-						<h1><a href="https://masonchu.github.io/post/first-hugo/">第一次使用 Hugo 就上手</a></h1>
-						<span>2017/07/05</span>
-					</div>
-
-					
 
 <h2 id="基本介紹">基本介紹</h2>
 
-<p>Hugo 是一套生成靜態頁面的工具(static site generator)。利用 Markdown 將內容跟樣式外觀完整分開，再利用生成的靜態網頁直接發佈到 server 上。般來說 markdown 語法對應樣式種類會比較少，但是相對的也是幫助在寫作的時候專注在內容而不是樣式上。</p>
+<p>GVM 是一套管理 golang 版本的套件，類似於 nodeJS / nvm。</p>
 
-<h3 id="與動態的-blog-平台比較">與動態的 blog 平台比較</h3>
+<h2 id="安裝-gvm">安裝 GVM</h2>
 
-<h5 id="優點">優點</h5>
-
-<ol>
-<li>很容易對文章內容進行 git 版控或是多人協作<br /></li>
-<li>生成的靜態網頁瀏覽速度很快，也不需要對 server 系統依賴<br /></li>
-<li>容易互相在同類型的靜態生成工具之間轉換，只要把 markdown 的文章內容帶著走就好了<br /></li>
-</ol>
-
-<h5 id="缺點">缺點</h5>
-
-<ol>
-<li>需要熟悉 markdown , git<br /></li>
-<li>通常不會有線上編輯模式或是管理平台<br /></li>
-<li>如果想要取得流量或讀者留言需要註冊其他服務</li>
-</ol>
-
-<h2 id="第一次安裝">第一次安裝</h2>
-
-<p>如果是 mac OS 只要執行</p>
-
-<pre><code>brew install hugo
+<pre><code>bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 </code></pre>
 
-<p>就可以直接安裝完成，之後進入選定好儲存檔案的目錄下</p>
+<p>安裝之後應該會在 bashrc 下加入 source 的指令，如果安裝完還是找不到 gvm 指令就需要檢查一下這塊。</p>
 
-<pre><code>hugo new site &lt;SiteName&gt;
+<pre><code>source &quot;/Users/&lt;username&gt;/.gvm/scripts/gvm&quot;
 </code></pre>
 
-<p>就會建立出預設的檔案目錄</p>
+<h2 id="首次使用-gvm">首次使用 GVM</h2>
 
-<h3 id="建議第一篇-post">建議第一篇 post</h3>
+<p>使用 GVM 安裝 Go1.4 與之後版本。go1.4 版本之後使用 go 對自己編譯，因此沒有安裝 go 的狀況下之後的版本都是無法編譯的。</p>
 
-<pre><code>hugo new post/my-first-post.md
+<pre><code>gvm install go1.4 --binary # 直接安裝 binary
+gvm use go1.4 # 使用 go1.4 的環境
+export GOROOTBOOTSTRAP=$GOROOT # 設定 $GOROOTBOOTSTRAP
+gvm install go1.6 # 安裝 Go 1.6
+Installing go1.6...
 </code></pre>
 
-<p>建立後的 md 檔案產生在 content/post 目錄</p>
+<h2 id="常用指令">常用指令</h2>
 
-<h3 id="選擇-theme">選擇 Theme</h3>
-
-<h3 id="挑選寫作工具">挑選寫作工具</h3>
-
-<h3 id="常用指令">常用指令</h3>
-
-<pre><code>// 建立可以發佈的靜態檔案
-hugo
-// 建立 local 端 server 連同草稿
-hugo server --buildDrafts 
+<pre><code>gvm list	- 列出全部已經安裝的版本
+gvm listall	- 列出線上可安裝版本
+gvm use		- 切換使用特定版本
 </code></pre>
 
-<hr />
+<h2 id="reference">Reference</h2>
 
-<p>Hugo 官網說明文件 <a href="https://gohugo.io/overview/quickstart/">https://gohugo.io/overview/quickstart/</a></p>
+<p><a href="https://github.com/moovweb/gvm">https://github.com/moovweb/gvm</a><br />
+<a href="https://blog.longwin.com.tw/2016/11/golang-gvm-go-version-manager-install-2016/">https://blog.longwin.com.tw/2016/11/golang-gvm-go-version-manager-install-2016/</a></p>
 
-
-				</div>
-				
 
 			</div>
-			<div class="col-sm-1 col-md-3 col-md-4">
-			</div>
+			<div id="disqus_thread"></div>
+			<script>
+
+			
+
+			
+
+			(function() { 
+			var d = document, s = d.createElement('script');
+			s.src = 'https://build-awesome.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+
+		</div>
+		<div class="col-sm-1 col-md-3 col-md-4">
 		</div>
 	</div>
+</div>
 
 
 

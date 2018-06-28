@@ -47,15 +47,15 @@
 			<p>Recent Posts:</p>
 			<ul>
 				
+				<li><a href="https://masonchu.github.io/post/gvm-go-version/">使用 GVM 管理 go 版本</a></li>
+				
 				<li><a href="https://masonchu.github.io/post/install-and-start-nsq/">安裝和啟用 NSQ 服務</a></li>
 				
 				<li><a href="https://masonchu.github.io/post/first-hugo/">第一次使用 Hugo 就上手</a></li>
 				
 				<li><a href="https://masonchu.github.io/categories/">Categories</a></li>
 				
-				<li><a href="https://masonchu.github.io/tags/hugo/">Hugo</a></li>
-				
-				<li><a href="https://masonchu.github.io/">Mason Chu</a></li>
+				<li><a href="https://masonchu.github.io/tags/golang/">Golang</a></li>
 				
 			</ul>
 		</div>
@@ -69,6 +69,57 @@
 		</div>
 		<div class="col-sm-7 col-sm-offset-4 col-md-6 col-md-offset-3 col-lg-5 col-lg-offset-3 content">
 
+			
+			<div class="post">
+
+				<div class="post-heading">
+					<h1>
+						<a href="https://masonchu.github.io/post/gvm-go-version/">使用 GVM 管理 go 版本</a>
+					</h1>
+					<span>2018/06/25</span>
+				</div>
+
+				
+
+<h2 id="基本介紹">基本介紹</h2>
+
+<p>GVM 是一套管理 golang 版本的套件，類似於 nodeJS / nvm。</p>
+
+<h2 id="安裝-gvm">安裝 GVM</h2>
+
+<pre><code>bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+</code></pre>
+
+<p>安裝之後應該會在 bashrc 下加入 source 的指令，如果安裝完還是找不到 gvm 指令就需要檢查一下這塊。</p>
+
+<pre><code>source &quot;/Users/&lt;username&gt;/.gvm/scripts/gvm&quot;
+</code></pre>
+
+<h2 id="首次使用-gvm">首次使用 GVM</h2>
+
+<p>使用 GVM 安裝 Go1.4 與之後版本。go1.4 版本之後使用 go 對自己編譯，因此沒有安裝 go 的狀況下之後的版本都是無法編譯的。</p>
+
+<pre><code>gvm install go1.4 --binary # 直接安裝 binary
+gvm use go1.4 # 使用 go1.4 的環境
+export GOROOTBOOTSTRAP=$GOROOT # 設定 $GOROOTBOOTSTRAP
+gvm install go1.6 # 安裝 Go 1.6
+Installing go1.6...
+</code></pre>
+
+<h2 id="常用指令">常用指令</h2>
+
+<pre><code>gvm list	- 列出全部已經安裝的版本
+gvm listall	- 列出線上可安裝版本
+gvm use		- 切換使用特定版本
+</code></pre>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://github.com/moovweb/gvm">https://github.com/moovweb/gvm</a><br />
+<a href="https://blog.longwin.com.tw/2016/11/golang-gvm-go-version-manager-install-2016/">https://blog.longwin.com.tw/2016/11/golang-gvm-go-version-manager-install-2016/</a></p>
+
+
+			</div>
 			
 			<div class="post">
 
