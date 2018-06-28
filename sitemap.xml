@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>https://masonchu.github.io/post/</loc>
+    <lastmod>2018-06-25T14:54:21+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://masonchu.github.io/categories/</loc>
     <priority>0</priority>
   </url>
@@ -29,26 +34,19 @@
   </url>
   
   <url>
+    <loc>https://masonchu.github.io/</loc>
+    <lastmod>2018-06-25T14:54:21+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://masonchu.github.io/tags/hugo/</loc>
     <lastmod>2017-07-05T12:35:25+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://masonchu.github.io/</loc>
-    <lastmod>2018-06-25T14:54:21+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://masonchu.github.io/tags/microservice/</loc>
     <lastmod>2018-06-21T15:53:16+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://masonchu.github.io/post/</loc>
-    <lastmod>2018-06-25T14:54:21+08:00</lastmod>
     <priority>0</priority>
   </url>
   
