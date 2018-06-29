@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Golang on Mason Chu</title>
-    <link>https://masonchu.github.io/tags/golang/</link>
-    <description>Recent content in Golang on Mason Chu</description>
+    <title>golang on Mason Chu</title>
+    <link>https://masonchu.github.io/golang/</link>
+    <description>Recent content in golang on Mason Chu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Mon, 25 Jun 2018 14:54:21 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 29 Jun 2018 11:05:04 +0800</lastBuildDate>
     
-	<atom:link href="https://masonchu.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://masonchu.github.io/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cobra 強大的 Golang 命令列工具</title>
+      <link>https://masonchu.github.io/golang/golang-cobra/</link>
+      <pubDate>Wed, 27 Jun 2018 12:49:40 +0800</pubDate>
+      
+      <guid>https://masonchu.github.io/golang/golang-cobra/</guid>
+      <description>基本介紹 預設使用 viper 套件處理環境變數
+使用方法 安裝 建立根命令 cobra init   注意如果目錄下已經有檔案會出現 Cobra will not create a new project in a non empty directory，這時候新開目錄建立之後把全部資料移過來就可以。（需要修改 main.go import 路徑）
+ 應該會建立以下檔案 + cmd
+root.go + main.go
+package main func main() { cmd.Execute() }  這時候只要執行 go run main.go 就會顯示 cobra 預設的 CLI 指令。
+A longer description that spans multiple lines and likely contains examples and usage of using your application. For example: Cobra is a CLI library for Go that empowers applications.</description>
+    </item>
     
     <item>
       <title>使用 GVM 管理 go 版本</title>

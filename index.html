@@ -12,19 +12,19 @@
     <title>Home :: Mason Chu</title>
     
     
-    <link href="/css/nucleus.css?1530240209" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1530240209" rel="stylesheet">
-    <link href="/css/hybrid.css?1530240209" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1530240209" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1530240209" rel="stylesheet">
-    <link href="/css/auto-complete.css?1530240209" rel="stylesheet">
-    <link href="/css/theme.css?1530240209" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1530240209" rel="stylesheet">
+    <link href="/css/nucleus.css?1530243581" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1530243581" rel="stylesheet">
+    <link href="/css/hybrid.css?1530243581" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1530243581" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1530243581" rel="stylesheet">
+    <link href="/css/auto-complete.css?1530243581" rel="stylesheet">
+    <link href="/css/theme.css?1530243581" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1530243581" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1530240209" rel="stylesheet">
+      <link href="/css/theme-blue.css?1530243581" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1530240209"></script>
+    <script src="/js/jquery-2.x.min.js?1530243581"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1530240209"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1530240209"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1530243581"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1530243581"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1530240209"></script>
+<script type="text/javascript" src="/js/search.js?1530243581"></script>
 
     
   </div>
@@ -84,13 +84,13 @@
  
   
     
-    <li data-nav-id="/post/" title="" class="dd-item 
+    <li data-nav-id="/golang/" title="golang" class="dd-item 
         
         
         
         ">
-      <a href="/post/">
-          
+      <a href="/golang/">
+          golang
           
       </a>
       
@@ -109,8 +109,27 @@
  
   
     
-      <li data-nav-id="/post/gvm-go-version/" title="使用 GVM 管理 go 版本" class="dd-item ">
-        <a href="/post/gvm-go-version/">
+      <li data-nav-id="/golang/golang-cobra/" title="Cobra 強大的 Golang 命令列工具" class="dd-item ">
+        <a href="/golang/golang-cobra/">
+        Cobra 強大的 Golang 命令列工具
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/golang/gvm-go-version/" title="使用 GVM 管理 go 版本" class="dd-item ">
+        <a href="/golang/gvm-go-version/">
         使用 GVM 管理 go 版本
         
         </a>
@@ -121,6 +140,38 @@
 
             
           
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/microservices/" title="microservices" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/microservices/">
+          microservices
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
             
             
 
@@ -128,8 +179,8 @@
  
   
     
-      <li data-nav-id="/post/install-and-start-nsq/" title="安裝和啟用 NSQ 服務" class="dd-item ">
-        <a href="/post/install-and-start-nsq/">
+      <li data-nav-id="/microservices/install-and-start-nsq/" title="安裝和啟用 NSQ 服務" class="dd-item ">
+        <a href="/microservices/install-and-start-nsq/">
         安裝和啟用 NSQ 服務
         
         </a>
@@ -140,24 +191,37 @@
 
             
           
-            
-            
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
 
 
  
   
     
-      <li data-nav-id="/post/start-microservices/" title="開始 microservices 架構" class="dd-item ">
-        <a href="/post/start-microservices/">
-        開始 microservices 架構
+    <li data-nav-id="/post/" title="posts" class="dd-item 
         
-        </a>
-    </li>
-     
-  
- 
-
-            
+        
+        
+        ">
+      <a href="/post/">
+          posts
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
           
             
             
@@ -256,7 +320,46 @@
 	
 		
 	
-		 
+		
+  
+
+
+	
+	
+
+<h2>
+<a href="/golang/" >golang</a>
+</h2>
+
+
+
+
+
+
+
+			
+				
+<p>前言 2017 跳脫待了9年的微軟圈，一方面是想要挑戰自己能更接觸到更大型完整的系統，另一方面也是受夠了在 mac 裡面安裝 parallels。結果一離開微軟就做了不少改變，更開放也更接觸 open source，開發跟部屬環境對非 windows 的支援也更全面。
+為什麼選擇 golang 由於以往都是 C# 的經驗為主，自然在挑選的時候以強型別/編譯式語言為主。java 有著跟 C# 一樣的問題，環境限制 JVM，oracle 也開始想盡辦法要在 licence 這上面撈一些。看到 golang 高效能高併發，還支援大多數 OS 不用額外安裝環境，光是想到就等不及要入坑。</p>
+				
+			
+		
+
+		
+			
+
+	
+    
+    
+
+	
+		
+	
+
+	
+
+			
+
 		
 	
 		
@@ -267,7 +370,98 @@
 	
 
 <h2>
-<a href="/post/gvm-go-version/" >使用 GVM 管理 go 版本</a>
+<a href="/microservices/" >microservices</a>
+</h2>
+
+
+
+
+
+
+
+			
+				
+<p>monolithic vs microservices 以往在建構大型系統的時候，本來也就是會區分成多個部分來進行。像是常見的金流物流系統，就是將部分系統功能區分出去。microservices 則是將這種概念又更延伸到極致。
+前置作業 開始進行 microservices 至少要具備的基本建設。
+開發相關配置  服務發現 service discovery
+ k8s etcd consul Netflix/eureka  事件訊息 event sourcing messaging  kafka  系統監控 monitor
+ metrics 訊息傳遞 transport  grpc thrift http  斷路器 Circuit Breaker 紀錄追蹤 Log Tracking  opentracing zipkin  Auth  Devops  CI / CD Docker k8s  golang 相關套件  go-kit https://github.com/go-kit/kit go-micro https://github.com/micro/go-micro gizmo https://github.com/nytimes/gizmo  造成延伸問題 microservices solve organizational problems</p>
+				
+			
+		
+
+		
+			
+
+	
+    
+    
+
+	
+		
+	
+
+	
+
+			
+
+		
+	
+		
+  
+
+
+	
+	
+
+<h2>
+<a href="/golang/golang-cobra/" >Cobra 強大的 Golang 命令列工具</a>
+</h2>
+
+
+
+
+
+
+
+			
+				
+<p>基本介紹 預設使用 viper 套件處理環境變數
+使用方法 安裝 建立根命令 cobra init   注意如果目錄下已經有檔案會出現 Cobra will not create a new project in a non empty directory，這時候新開目錄建立之後把全部資料移過來就可以。（需要修改 main.go import 路徑）
+ 應該會建立以下檔案 + cmd
+root.go + main.go
+package main func main() { cmd.Execute() }  這時候只要執行 go run main.go 就會顯示 cobra 預設的 CLI 指令。
+A longer description that spans multiple lines and likely contains examples and usage of using your application. For example: Cobra is a CLI library for Go that empowers applications.</p>
+				
+			
+		
+
+		
+			
+
+	
+    
+    
+
+	
+		
+	
+
+	
+
+			
+
+		
+	
+		
+  
+
+
+	
+	
+
+<h2>
+<a href="/golang/gvm-go-version/" >使用 GVM 管理 go 版本</a>
 </h2>
 
 
@@ -311,7 +505,7 @@ gvm install go1.4 --binary # 直接安裝 binary gvm use go1.4 # 使用 go1.4 �
 	
 
 <h2>
-<a href="/post/install-and-start-nsq/" >安裝和啟用 NSQ 服務</a>
+<a href="/microservices/install-and-start-nsq/" >安裝和啟用 NSQ 服務</a>
 </h2>
 
 
@@ -355,7 +549,7 @@ nsqlookupd nsqd --lookupd-tcp-address=127.0.0.1:4160 nsqadmin --lookupd-http-add
 	
 
 <h2>
-<a href="/post/start-microservices/" >開始 microservices 架構</a>
+<a href="/post/" >posts</a>
 </h2>
 
 
@@ -366,11 +560,7 @@ nsqlookupd nsqd --lookupd-tcp-address=127.0.0.1:4160 nsqadmin --lookupd-http-add
 
 			
 				
-<p>monolithic vs microservices 以往在建構大型系統的時候，本來也就是會區分成多個部分來進行。像是常見的金流物流系統，就是將部分系統功能區分出去。microservices 則是將這種概念又更延伸到極致。
-前置作業 開始進行 microservices 至少要具備的基本建設。
-開發相關配置  服務發現 service discovery
- k8s etcd consul Netflix/eureka  事件訊息 event sourcing messaging  kafka  系統監控 monitor
- metrics 訊息傳遞 transport  grpc thrift http  斷路器 Circuit Breaker 紀錄追蹤 Log Tracking  opentracing zipkin  Auth  Devops  CI / CD Docker k8s  golang 相關套件  go-kit https://github.com/go-kit/kit go-micro https://github.com/micro/go-micro gizmo https://github.com/nytimes/gizmo  造成延伸問題 microservices solve organizational problems</p>
+<p>List the child pages of a page</p>
 				
 			
 		
@@ -496,6 +686,116 @@ hugo new site &lt;SiteName&gt;  就會建立出預設的檔案目錄
                         
             
             
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
         
                     
             
@@ -506,6 +806,8 @@ hugo new site &lt;SiteName&gt;  就會建立出預設的檔案目錄
 
         
         
+            <a class="nav nav-next" href="/golang/" title="golang" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
     </div>
 
     </section>
@@ -513,20 +815,20 @@ hugo new site &lt;SiteName&gt;  就會建立出預設的檔案目錄
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1530240209"></script>
-    <script src="/js/perfect-scrollbar.min.js?1530240209"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1530240209"></script>
-    <script src="/js/jquery.sticky.js?1530240209"></script>
-    <script src="/js/featherlight.min.js?1530240209"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1530240209"></script>
-    <script src="/js/highlight.pack.js?1530240209"></script>
+    <script src="/js/clipboard.min.js?1530243581"></script>
+    <script src="/js/perfect-scrollbar.min.js?1530243581"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1530243581"></script>
+    <script src="/js/jquery.sticky.js?1530243581"></script>
+    <script src="/js/featherlight.min.js?1530243581"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1530243581"></script>
+    <script src="/js/highlight.pack.js?1530243581"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1530240209"></script>
-    <script src="/js/learn.js?1530240209"></script>
-    <script src="/js/hugo-learn.js?1530240209"></script>
+    <script src="/js/modernizr.custom.71422.js?1530243581"></script>
+    <script src="/js/learn.js?1530243581"></script>
+    <script src="/js/hugo-learn.js?1530243581"></script>
 
-    <link href="/mermaid/mermaid.css?1530240209" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1530240209"></script>
+    <link href="/mermaid/mermaid.css?1530243581" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1530243581"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

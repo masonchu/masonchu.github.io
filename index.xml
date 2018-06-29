@@ -6,17 +6,31 @@
     <description>Recent content in Home on Mason Chu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Mon, 25 Jun 2018 14:54:21 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Jun 2018 12:49:40 +0800</lastBuildDate>
     
 	<atom:link href="https://masonchu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Cobra 強大的 Golang 命令列工具</title>
+      <link>https://masonchu.github.io/golang/golang-cobra/</link>
+      <pubDate>Wed, 27 Jun 2018 12:49:40 +0800</pubDate>
+      
+      <guid>https://masonchu.github.io/golang/golang-cobra/</guid>
+      <description>基本介紹 預設使用 viper 套件處理環境變數
+使用方法 安裝 建立根命令 cobra init   注意如果目錄下已經有檔案會出現 Cobra will not create a new project in a non empty directory，這時候新開目錄建立之後把全部資料移過來就可以。（需要修改 main.go import 路徑）
+ 應該會建立以下檔案 + cmd
+root.go + main.go
+package main func main() { cmd.Execute() }  這時候只要執行 go run main.go 就會顯示 cobra 預設的 CLI 指令。
+A longer description that spans multiple lines and likely contains examples and usage of using your application. For example: Cobra is a CLI library for Go that empowers applications.</description>
+    </item>
+    
+    <item>
       <title>使用 GVM 管理 go 版本</title>
-      <link>https://masonchu.github.io/post/gvm-go-version/</link>
+      <link>https://masonchu.github.io/golang/gvm-go-version/</link>
       <pubDate>Mon, 25 Jun 2018 14:54:21 +0800</pubDate>
       
-      <guid>https://masonchu.github.io/post/gvm-go-version/</guid>
+      <guid>https://masonchu.github.io/golang/gvm-go-version/</guid>
       <description>基本介紹 GVM 是一套管理 golang 版本的套件，類似於 nodeJS / nvm。
 安裝 GVM bash &amp;lt; &amp;lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)  安裝之後應該會在 bashrc 下加入 source 的指令，如果安裝完還是找不到 gvm 指令就需要檢查一下這塊。
 source &amp;quot;/Users/&amp;lt;username&amp;gt;/.gvm/scripts/gvm&amp;quot;  首次使用 GVM 使用 GVM 安裝 Go1.4 與之後版本。go1.4 版本之後使用 go 對自己編譯，因此沒有安裝 go 的狀況下之後的版本都是無法編譯的。
@@ -25,27 +39,14 @@ gvm install go1.4 --binary # 直接安裝 binary gvm use go1.4 # 使用 go1.4 �
     
     <item>
       <title>安裝和啟用 NSQ 服務</title>
-      <link>https://masonchu.github.io/post/install-and-start-nsq/</link>
+      <link>https://masonchu.github.io/microservices/install-and-start-nsq/</link>
       <pubDate>Thu, 21 Jun 2018 15:53:16 +0800</pubDate>
       
-      <guid>https://masonchu.github.io/post/install-and-start-nsq/</guid>
+      <guid>https://masonchu.github.io/microservices/install-and-start-nsq/</guid>
       <description>安裝 NSQ 在本機測試環境 NSQ 本身有提供 brew / docker 版本。在這邊我是直接使用 github 原始碼下載編譯，注意 golang 1.7+ 並且已經有 dep 套件管理。在 test.sh 會執行 golang test &amp;amp; 編譯出所有的可執行檔。
 下載 source code &amp;amp; 安裝相依性套件 git clone https://github.com/nsqio/nsq $GOPATH/src/github.com/nsqio/nsq cd $GOPATH/src/github.com/nsqio/nsq dep ensure  測試 &amp;amp; 編譯 ./test.sh  安裝 NSQ 安裝至 /usr/local/bin 目錄
 make install  依序啟動服務 nsqlookupd 預設監聽 http:4161 / tcp:4160，而 nsqd 啟動時自動到 nsqlookupd 註冊。
 nsqlookupd nsqd --lookupd-tcp-address=127.0.0.1:4160 nsqadmin --lookupd-http-address=127.0.0.1:4161  使用 go-nsq 發布與接受訊息 發佈環境配置 使用在 microservices 中時候，nsqd 建議並不是全部 services 共用，而是個別配置一個 localhost 的 nsqd 註冊到 nsqlookupd。</description>
-    </item>
-    
-    <item>
-      <title>開始 microservices 架構</title>
-      <link>https://masonchu.github.io/post/start-microservices/</link>
-      <pubDate>Wed, 05 Jul 2017 15:52:11 +0800</pubDate>
-      
-      <guid>https://masonchu.github.io/post/start-microservices/</guid>
-      <description>monolithic vs microservices 以往在建構大型系統的時候，本來也就是會區分成多個部分來進行。像是常見的金流物流系統，就是將部分系統功能區分出去。microservices 則是將這種概念又更延伸到極致。
-前置作業 開始進行 microservices 至少要具備的基本建設。
-開發相關配置  服務發現 service discovery
- k8s etcd consul Netflix/eureka  事件訊息 event sourcing messaging  kafka  系統監控 monitor
- metrics 訊息傳遞 transport  grpc thrift http  斷路器 Circuit Breaker 紀錄追蹤 Log Tracking  opentracing zipkin  Auth  Devops  CI / CD Docker k8s  golang 相關套件  go-kit https://github.com/go-kit/kit go-micro https://github.com/micro/go-micro gizmo https://github.com/nytimes/gizmo  造成延伸問題 microservices solve organizational problems</description>
     </item>
     
     <item>

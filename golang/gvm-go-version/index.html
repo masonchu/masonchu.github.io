@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Golang :: Mason Chu</title>
+    <title>使用 GVM 管理 go 版本 :: Mason Chu</title>
     
     
     <link href="/css/nucleus.css?1530243581" rel="stylesheet">
@@ -45,7 +45,7 @@
 	gtag('config', 'UA-28614097-1');
 </script>
   </head>
-  <body class="" data-url="/tags/golang/">
+  <body class="" data-url="/golang/gvm-go-version/">
     <nav id="sidebar" class="">
 
 
@@ -85,7 +85,7 @@
   
     
     <li data-nav-id="/golang/" title="golang" class="dd-item 
-        
+        parent
         
         
         ">
@@ -128,7 +128,7 @@
  
   
     
-      <li data-nav-id="/golang/gvm-go-version/" title="使用 GVM 管理 go 版本" class="dd-item ">
+      <li data-nav-id="/golang/gvm-go-version/" title="使用 GVM 管理 go 版本" class="dd-item active">
         <a href="/golang/gvm-go-version/">
         使用 GVM 管理 go 版本
         
@@ -308,7 +308,19 @@
                     
           
           
-            Golang
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Home</a> > <a href='/golang/'>golang</a> > 使用 GVM 管理 go 版本
+          
+         
+          
+         
           
            
                   </span>
@@ -316,7 +328,18 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#基本介紹">基本介紹</a></li>
+<li><a href="#安裝-gvm">安裝 GVM</a></li>
+<li><a href="#首次使用-gvm">首次使用 GVM</a></li>
+<li><a href="#常用指令">常用指令</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -328,7 +351,7 @@
         
         <div id="body-inner">
           
-            <h1>Golang</h1>
+            <h1>使用 GVM 管理 go 版本</h1>
           
 
         
@@ -336,9 +359,48 @@
 
 
 
+<h2 id="基本介紹">基本介紹</h2>
+
+<p>GVM 是一套管理 golang 版本的套件，類似於 nodeJS / nvm。</p>
+
+<h2 id="安裝-gvm">安裝 GVM</h2>
+
+<pre><code>bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+</code></pre>
+
+<p>安裝之後應該會在 bashrc 下加入 source 的指令，如果安裝完還是找不到 gvm 指令就需要檢查一下這塊。</p>
+
+<pre><code>source &quot;/Users/&lt;username&gt;/.gvm/scripts/gvm&quot;
+</code></pre>
+
+<h2 id="首次使用-gvm">首次使用 GVM</h2>
+
+<p>使用 GVM 安裝 Go1.4 與之後版本。go1.4 版本之後使用 go 對自己編譯，因此沒有安裝 go 的狀況下之後的版本都是無法編譯的。</p>
+
+<pre><code>gvm install go1.4 --binary # 直接安裝 binary
+gvm use go1.4 # 使用 go1.4 的環境
+export GOROOTBOOTSTRAP=$GOROOT # 設定 $GOROOTBOOTSTRAP
+gvm install go1.6 # 安裝 Go 1.6
+Installing go1.6...
+</code></pre>
+
+<h2 id="常用指令">常用指令</h2>
+
+<pre><code>gvm list	- 列出全部已經安裝的版本
+gvm listall	- 列出線上可安裝版本
+gvm use		- 切換使用特定版本
+</code></pre>
+
+<h2 id="reference">Reference</h2>
+
+<p><a href="https://github.com/moovweb/gvm">https://github.com/moovweb/gvm</a><br />
+<a href="https://blog.longwin.com.tw/2016/11/golang-gvm-go-version-manager-install-2016/">https://blog.longwin.com.tw/2016/11/golang-gvm-go-version-manager-install-2016/</a></p>
+
+
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -386,6 +448,59 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -413,54 +528,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -503,8 +570,10 @@
 
 
         
+            <a class="nav nav-prev" href="/golang/golang-cobra/" title="Cobra 強大的 Golang 命令列工具"> <i class="fa fa-chevron-left"></i></a>
         
-            <a class="nav nav-next" href="/golang/" title="golang" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+            <a class="nav nav-next" href="/microservices/" title="microservices" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -533,3 +602,4 @@
     
   </body>
 </html>
+
