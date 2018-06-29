@@ -12,19 +12,19 @@
     <title>microservices :: Mason Chu</title>
     
     
-    <link href="/css/nucleus.css?1530245356" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1530245356" rel="stylesheet">
-    <link href="/css/hybrid.css?1530245356" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1530245356" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1530245356" rel="stylesheet">
-    <link href="/css/auto-complete.css?1530245356" rel="stylesheet">
-    <link href="/css/theme.css?1530245356" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1530245356" rel="stylesheet">
+    <link href="/css/nucleus.css?1530283154" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1530283154" rel="stylesheet">
+    <link href="/css/hybrid.css?1530283154" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1530283154" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1530283154" rel="stylesheet">
+    <link href="/css/auto-complete.css?1530283154" rel="stylesheet">
+    <link href="/css/theme.css?1530283154" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1530283154" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1530245356" rel="stylesheet">
+      <link href="/css/theme-blue.css?1530283154" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1530245356"></script>
+    <script src="/js/jquery-2.x.min.js?1530283154"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1530245356"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1530245356"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1530283154"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1530283154"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1530245356"></script>
+<script type="text/javascript" src="/js/search.js?1530283154"></script>
 
     
   </div>
@@ -361,85 +361,6 @@
 
 
 
-
-
-
-
-
-<ul class="children children-li">
-	
-    
-    
-
-	
-		
-	
-		
-  
-
-
-<li>
-<a href="/microservices/start-microservices/" >開始 microservices</a>
-</li>
-
-
-
-
-
-
-			
-				
-<p>monolithic vs microservices 以往在建構大型系統的時候，本來也就是會區分成多個部分來進行。像是常見的金流物流系統，就是將部分系統功能區分出去。microservices 則是將這種概念又更延伸到極致。
-前置作業 開始進行 microservices 至少要具備的基本建設。
-開發相關配置  服務發現 service discovery
- k8s etcd consul Netflix/eureka  事件訊息 event sourcing messaging  kafka  系統監控 monitor
- metrics 訊息傳遞 transport  grpc thrift http  斷路器 Circuit Breaker 紀錄追蹤 Log Tracking  opentracing zipkin  Auth  Devops  CI / CD Docker k8s  golang 相關套件  go-kit https://github.com/go-kit/kit go-micro https://github.com/micro/go-micro gizmo https://github.com/nytimes/gizmo  造成延伸問題 microservices solve organizational problems</p>
-				
-			
-		
-
-		
-			
-
-		
-	
-		
-  
-
-
-<li>
-<a href="/microservices/install-and-start-nsq/" >安裝和啟用 NSQ 服務</a>
-</li>
-
-
-
-
-
-
-			
-				
-<p>安裝 NSQ 在本機測試環境 NSQ 本身有提供 brew / docker 版本。在這邊我是直接使用 github 原始碼下載編譯，注意 golang 1.7+ 並且已經有 dep 套件管理。在 test.sh 會執行 golang test &amp; 編譯出所有的可執行檔。
-下載 source code &amp; 安裝相依性套件 git clone https://github.com/nsqio/nsq $GOPATH/src/github.com/nsqio/nsq cd $GOPATH/src/github.com/nsqio/nsq dep ensure  測試 &amp; 編譯 ./test.sh  安裝 NSQ 安裝至 /usr/local/bin 目錄
-make install  依序啟動服務 nsqlookupd 預設監聽 http:4161 / tcp:4160，而 nsqd 啟動時自動到 nsqlookupd 註冊。
-nsqlookupd nsqd --lookupd-tcp-address=127.0.0.1:4160 nsqadmin --lookupd-http-address=127.0.0.1:4161  使用 go-nsq 發布與接受訊息 發佈環境配置 使用在 microservices 中時候，nsqd 建議並不是全部 services 共用，而是個別配置一個 localhost 的 nsqd 註冊到 nsqlookupd。</p>
-				
-			
-		
-
-		
-			
-
-		
-	
-
-	
-</ul>
-
-
-
-
-
-
 <footer class=" footline" >
 	
 </footer>
@@ -639,20 +560,20 @@ nsqlookupd nsqd --lookupd-tcp-address=127.0.0.1:4160 nsqadmin --lookupd-http-add
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1530245356"></script>
-    <script src="/js/perfect-scrollbar.min.js?1530245356"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1530245356"></script>
-    <script src="/js/jquery.sticky.js?1530245356"></script>
-    <script src="/js/featherlight.min.js?1530245356"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1530245356"></script>
-    <script src="/js/highlight.pack.js?1530245356"></script>
+    <script src="/js/clipboard.min.js?1530283154"></script>
+    <script src="/js/perfect-scrollbar.min.js?1530283154"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1530283154"></script>
+    <script src="/js/jquery.sticky.js?1530283154"></script>
+    <script src="/js/featherlight.min.js?1530283154"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1530283154"></script>
+    <script src="/js/highlight.pack.js?1530283154"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1530245356"></script>
-    <script src="/js/learn.js?1530245356"></script>
-    <script src="/js/hugo-learn.js?1530245356"></script>
+    <script src="/js/modernizr.custom.71422.js?1530283154"></script>
+    <script src="/js/learn.js?1530283154"></script>
+    <script src="/js/hugo-learn.js?1530283154"></script>
 
-    <link href="/mermaid/mermaid.css?1530245356" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1530245356"></script>
+    <link href="/mermaid/mermaid.css?1530283154" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1530283154"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
