@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Hugo :: Mason Chu</title>
+    <title>開始 microservices 架構 :: Mason Chu</title>
     
     
     <link href="/css/nucleus.css?1530240209" rel="stylesheet">
@@ -45,7 +45,7 @@
 	gtag('config', 'UA-28614097-1');
 </script>
   </head>
-  <body class="" data-url="/tags/hugo/">
+  <body class="" data-url="/post/start-microservices/">
     <nav id="sidebar" class="">
 
 
@@ -85,7 +85,7 @@
   
     
     <li data-nav-id="/post/" title="" class="dd-item 
-        
+        parent
         
         
         ">
@@ -147,7 +147,7 @@
  
   
     
-      <li data-nav-id="/post/start-microservices/" title="開始 microservices 架構" class="dd-item ">
+      <li data-nav-id="/post/start-microservices/" title="開始 microservices 架構" class="dd-item active">
         <a href="/post/start-microservices/">
         開始 microservices 架構
         
@@ -244,7 +244,19 @@
                     
           
           
-            Hugo
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Home</a> > <a href='/post/'></a> > 開始 microservices 架構
+          
+         
+          
+         
           
            
                   </span>
@@ -252,7 +264,22 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#monolithic-vs-microservices">monolithic vs microservices</a></li>
+<li><a href="#前置作業">前置作業</a>
+<ul>
+<li><a href="#開發相關配置">開發相關配置</a></li>
+<li><a href="#devops">Devops</a></li>
+</ul></li>
+<li><a href="#golang-相關套件">golang 相關套件</a></li>
+<li><a href="#造成延伸問題">造成延伸問題</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -264,7 +291,7 @@
         
         <div id="body-inner">
           
-            <h1>Hugo</h1>
+            <h1>開始 microservices 架構</h1>
           
 
         
@@ -272,9 +299,80 @@
 
 
 
+<h2 id="monolithic-vs-microservices">monolithic vs microservices</h2>
+
+<p>以往在建構大型系統的時候，本來也就是會區分成多個部分來進行。像是常見的金流物流系統，就是將部分系統功能區分出去。microservices 則是將這種概念又更延伸到極致。</p>
+
+<h2 id="前置作業">前置作業</h2>
+
+<p>開始進行 microservices 至少要具備的基本建設。</p>
+
+<h3 id="開發相關配置">開發相關配置</h3>
+
+<ol>
+<li>服務發現 service discovery<br />
+
+<ol>
+<li>k8s etcd</li>
+<li>consul</li>
+<li>Netflix/eureka</li>
+</ol></li>
+<li>事件訊息 event sourcing messaging
+
+<ol>
+<li>kafka</li>
+</ol></li>
+<li>系統監控 monitor<br /></li>
+<li>metrics</li>
+<li>訊息傳遞 transport
+
+<ol>
+<li>grpc</li>
+<li>thrift</li>
+<li>http</li>
+</ol></li>
+<li>斷路器 Circuit Breaker</li>
+<li>紀錄追蹤 Log Tracking
+
+<ol>
+<li>opentracing</li>
+<li>zipkin</li>
+</ol></li>
+<li>Auth</li>
+</ol>
+
+<h3 id="devops">Devops</h3>
+
+<ol>
+<li>CI / CD</li>
+<li>Docker</li>
+<li>k8s</li>
+</ol>
+
+<h2 id="golang-相關套件">golang 相關套件</h2>
+
+<ol>
+<li>go-kit <a href="https://github.com/go-kit/kit">https://github.com/go-kit/kit</a></li>
+<li>go-micro <a href="https://github.com/micro/go-micro">https://github.com/micro/go-micro</a></li>
+<li>gizmo <a href="https://github.com/nytimes/gizmo">https://github.com/nytimes/gizmo</a></li>
+</ol>
+
+<h2 id="造成延伸問題">造成延伸問題</h2>
+
+<p>microservices solve organizational problems<br />
+microservices cause technical problems</p>
+
+<h2 id="reference">Reference</h2>
+
+<p>Go + Microservices = Go Kit [I] - Peter Bourgon, Go Kit <a href="https://www.youtube.com/watch?v=NX0sHF8ZZgw">https://www.youtube.com/watch?v=NX0sHF8ZZgw</a><br />
+微服務基礎建設 - Service Discovery <a href="http://columns.chicken-house.net/2017/12/31/microservice9-servicediscovery/">http://columns.chicken-house.net/2017/12/31/microservice9-servicediscovery/</a>
+</p>
+
+
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -357,3 +455,4 @@
     
   </body>
 </html>
+

@@ -23,5 +23,18 @@ make install  依序啟動服務 nsqlookupd 預設監聽 http:4161 / tcp:4160�
 nsqlookupd nsqd --lookupd-tcp-address=127.0.0.1:4160 nsqadmin --lookupd-http-address=127.0.0.1:4161  使用 go-nsq 發布與接受訊息 發佈環境配置 使用在 microservices 中時候，nsqd 建議並不是全部 services 共用，而是個別配置一個 localhost 的 nsqd 註冊到 nsqlookupd。</description>
     </item>
     
+    <item>
+      <title>開始 microservices 架構</title>
+      <link>https://masonchu.github.io/post/start-microservices/</link>
+      <pubDate>Wed, 05 Jul 2017 15:52:11 +0800</pubDate>
+      
+      <guid>https://masonchu.github.io/post/start-microservices/</guid>
+      <description>monolithic vs microservices 以往在建構大型系統的時候，本來也就是會區分成多個部分來進行。像是常見的金流物流系統，就是將部分系統功能區分出去。microservices 則是將這種概念又更延伸到極致。
+前置作業 開始進行 microservices 至少要具備的基本建設。
+開發相關配置  服務發現 service discovery
+ k8s etcd consul Netflix/eureka  事件訊息 event sourcing messaging  kafka  系統監控 monitor
+ metrics 訊息傳遞 transport  grpc thrift http  斷路器 Circuit Breaker 紀錄追蹤 Log Tracking  opentracing zipkin  Auth  Devops  CI / CD Docker k8s  golang 相關套件  go-kit https://github.com/go-kit/kit go-micro https://github.com/micro/go-micro gizmo https://github.com/nytimes/gizmo  造成延伸問題 microservices solve organizational problems</description>
+    </item>
+    
   </channel>
 </rss>
