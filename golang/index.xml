@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>使用 GVM 管理 go 版本</title>
+      <link>https://masonchu.github.io/golang/gvm-go-version/</link>
+      <pubDate>Mon, 25 Jun 2018 14:54:21 +0800</pubDate>
+      
+      <guid>https://masonchu.github.io/golang/gvm-go-version/</guid>
+      <description>基本介紹 GVM 是一套管理 golang 版本的套件，類似於 nodeJS / nvm。
+安裝 GVM bash &amp;lt; &amp;lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)  安裝之後應該會在 bashrc 下加入 source 的指令，如果安裝完還是找不到 gvm 指令就需要檢查一下這塊。
+source &amp;quot;/Users/&amp;lt;username&amp;gt;/.gvm/scripts/gvm&amp;quot;  首次使用 GVM 使用 GVM 安裝 Go1.4 與之後版本。go1.4 版本之後使用 go 對自己編譯，因此沒有安裝 go 的狀況下之後的版本都是無法編譯的。
+gvm install go1.4 --binary # 直接安裝 binary gvm use go1.4 # 使用 go1.4 的環境 export GOROOTBOOTSTRAP=$GOROOT # 設定 $GOROOTBOOTSTRAP gvm install go1.6 # 安裝 Go 1.6 Installing go1.6...  常用指令 gvm list	- 列出全部已經安裝的版本 gvm listall	- 列出線上可安裝版本 gvm use	- 切換使用特定版本  Reference https://github.</description>
+    </item>
+    
+    <item>
       <title>Cobra 強大的 Golang 命令列工具</title>
       <link>https://masonchu.github.io/golang/golang-cobra/</link>
       <pubDate>Wed, 27 Jun 2018 12:49:40 +0800</pubDate>
@@ -23,18 +35,6 @@ go get -u github.com/spf13/cobra/cobra  建立根命令 cobra init   注意如�
  應該會建立以下檔案 + cmd
 root.go + main.go
 package main func main() { cmd.Execute() }  這時候只要執行 go run main.</description>
-    </item>
-    
-    <item>
-      <title>使用 GVM 管理 go 版本</title>
-      <link>https://masonchu.github.io/golang/gvm-go-version/</link>
-      <pubDate>Mon, 25 Jun 2018 14:54:21 +0800</pubDate>
-      
-      <guid>https://masonchu.github.io/golang/gvm-go-version/</guid>
-      <description>基本介紹 GVM 是一套管理 golang 版本的套件，類似於 nodeJS / nvm。
-安裝 GVM bash &amp;lt; &amp;lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)  安裝之後應該會在 bashrc 下加入 source 的指令，如果安裝完還是找不到 gvm 指令就需要檢查一下這塊。
-source &amp;quot;/Users/&amp;lt;username&amp;gt;/.gvm/scripts/gvm&amp;quot;  首次使用 GVM 使用 GVM 安裝 Go1.4 與之後版本。go1.4 版本之後使用 go 對自己編譯，因此沒有安裝 go 的狀況下之後的版本都是無法編譯的。
-gvm install go1.4 --binary # 直接安裝 binary gvm use go1.4 # 使用 go1.4 的環境 export GOROOTBOOTSTRAP=$GOROOT # 設定 $GOROOTBOOTSTRAP gvm install go1.6 # 安裝 Go 1.6 Installing go1.6...  常用指令 gvm list	- 列出全部已經安裝的版本 gvm listall	- 列出線上可安裝版本 gvm use	- 切換使用特定版本  Reference https://github.</description>
     </item>
     
   </channel>
