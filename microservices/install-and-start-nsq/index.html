@@ -12,19 +12,19 @@
     <title>安裝和啟用 NSQ 服務 :: Mason Chu</title>
     
     
-    <link href="/css/nucleus.css?1530283482" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1530283482" rel="stylesheet">
-    <link href="/css/hybrid.css?1530283482" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1530283482" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1530283482" rel="stylesheet">
-    <link href="/css/auto-complete.css?1530283482" rel="stylesheet">
-    <link href="/css/theme.css?1530283482" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1530283482" rel="stylesheet">
+    <link href="/css/nucleus.css?1530348752" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1530348752" rel="stylesheet">
+    <link href="/css/hybrid.css?1530348752" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1530348752" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1530348752" rel="stylesheet">
+    <link href="/css/auto-complete.css?1530348752" rel="stylesheet">
+    <link href="/css/theme.css?1530348752" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1530348752" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1530283482" rel="stylesheet">
+      <link href="/css/theme-blue.css?1530348752" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1530283482"></script>
+    <script src="/js/jquery-2.x.min.js?1530348752"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1530283482"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1530283482"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1530348752"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1530348752"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1530283482"></script>
+<script type="text/javascript" src="/js/search.js?1530348752"></script>
 
     
   </div>
@@ -84,7 +84,7 @@
  
   
     
-    <li data-nav-id="/golang/" title="golang" class="dd-item 
+    <li data-nav-id="/golang/" title="golang 開發心得" class="dd-item 
         
         
         
@@ -411,9 +411,10 @@ nsqadmin --lookupd-http-address=127.0.0.1:4161
 
 <p>使用在 microservices 中時候，nsqd 建議並不是全部 services 共用，而是個別配置一個 localhost 的 nsqd 註冊到 nsqlookupd。</p>
 
-<blockquote>
-<p>You may have your nsqds and nsqlookupds segregated so that all nodes are good candidates (we do this also), but this isn&rsquo;t a requirement. nsqlookupd can handle several nsqd &ldquo;clusters&rdquo; with distinct responsibilities, like a service discovery service.</p>
+<p>在 nsq gitlab issue 中提到，建議在每個 node 都部署一個 nsqd 再註冊到一台或多台的 nsqlookup 中，這樣各自的 service 生產的訊息就通一推到各自的 localhost，再由 nsqd 處理訊息這一段。
+&gt; You may have your nsqds and nsqlookupds segregated so that all nodes are good candidates (we do this also), but this isn&rsquo;t a requirement. nsqlookupd can handle several nsqd &ldquo;clusters&rdquo; with distinct responsibilities, like a service discovery service.</p>
 
+<blockquote>
 <p>When you get the nodes back you&rsquo;ll have to make a decision about which node you want to publish to. In our setup we either publish to localhost if nsqd is on the same box or a VIP.</p>
 </blockquote>
 
@@ -609,20 +610,20 @@ nsqadmin --lookupd-http-address=127.0.0.1:4161
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1530283482"></script>
-    <script src="/js/perfect-scrollbar.min.js?1530283482"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1530283482"></script>
-    <script src="/js/jquery.sticky.js?1530283482"></script>
-    <script src="/js/featherlight.min.js?1530283482"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1530283482"></script>
-    <script src="/js/highlight.pack.js?1530283482"></script>
+    <script src="/js/clipboard.min.js?1530348752"></script>
+    <script src="/js/perfect-scrollbar.min.js?1530348752"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1530348752"></script>
+    <script src="/js/jquery.sticky.js?1530348752"></script>
+    <script src="/js/featherlight.min.js?1530348752"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1530348752"></script>
+    <script src="/js/highlight.pack.js?1530348752"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1530283482"></script>
-    <script src="/js/learn.js?1530283482"></script>
-    <script src="/js/hugo-learn.js?1530283482"></script>
+    <script src="/js/modernizr.custom.71422.js?1530348752"></script>
+    <script src="/js/learn.js?1530348752"></script>
+    <script src="/js/hugo-learn.js?1530348752"></script>
 
-    <link href="/mermaid/mermaid.css?1530283482" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1530283482"></script>
+    <link href="/mermaid/mermaid.css?1530348752" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1530348752"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

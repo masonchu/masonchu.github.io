@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>golang on Mason Chu</title>
+    <title>golang 開發心得 on Mason Chu</title>
     <link>https://masonchu.github.io/golang/</link>
-    <description>Recent content in golang on Mason Chu</description>
+    <description>Recent content in golang 開發心得 on Mason Chu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
     <lastBuildDate>Fri, 29 Jun 2018 11:05:04 +0800</lastBuildDate>

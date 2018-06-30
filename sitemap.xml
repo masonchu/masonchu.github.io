@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://masonchu.github.io/golang/gvm-go-version/</loc>
-    <lastmod>2018-06-25T14:54:21+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://masonchu.github.io/golang/</loc>
     <lastmod>2018-06-29T11:05:04+08:00</lastmod>
   </url>
@@ -15,6 +10,11 @@
   <url>
     <loc>https://masonchu.github.io/microservices/</loc>
     <lastmod>2018-06-29T11:03:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://masonchu.github.io/golang/gvm-go-version/</loc>
+    <lastmod>2018-06-25T14:54:21+08:00</lastmod>
   </url>
   
   <url>
