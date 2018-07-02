@@ -12,19 +12,19 @@
     <title>Home :: Mason Chu</title>
     
     
-    <link href="/css/nucleus.css?1530503966" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1530503966" rel="stylesheet">
-    <link href="/css/hybrid.css?1530503966" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1530503966" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1530503966" rel="stylesheet">
-    <link href="/css/auto-complete.css?1530503966" rel="stylesheet">
-    <link href="/css/theme.css?1530503966" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1530503966" rel="stylesheet">
+    <link href="/css/nucleus.css?1530573900" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1530573900" rel="stylesheet">
+    <link href="/css/hybrid.css?1530573900" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1530573900" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1530573900" rel="stylesheet">
+    <link href="/css/auto-complete.css?1530573900" rel="stylesheet">
+    <link href="/css/theme.css?1530573900" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1530573900" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1530503966" rel="stylesheet">
+      <link href="/css/theme-blue.css?1530573900" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1530503966"></script>
+    <script src="/js/jquery-2.x.min.js?1530573900"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1530503966"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1530503966"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1530573900"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1530573900"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1530503966"></script>
+<script type="text/javascript" src="/js/search.js?1530573900"></script>
 
     
   </div>
@@ -342,8 +342,9 @@
 <p>2017 跳脫待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是受夠了在 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。
  結果這幾年微軟新 CEO 就做了不少改變，更開放也更接觸 open source，開發跟部屬環境對非 windows 的支援也更全面。我個人對於微軟這次的改變真的是非常欣賞，終於處理了 windows / office 派系問題走向開放。事實也證明結果並沒有讓微軟失去領先地位，而是藉著開發社群 &amp; 雲端創造更多收益。
  為什麼選擇 golang 以往都是 C# 的經驗為主，自然在挑選的時候以強型別/編譯式語言為主。大部分數據分析也顯示 go 在執行效能上比 java / C# 更高一個層級。
-環境部署原來可以這麼容易 可以不用安裝 .net framework，專案編譯完打包居然丟上去 server 就可以跑。而且只要一個檔案，上傳還不用壓縮，這真的不科學。
-建置速度超快 用 go 開發的專案好多 可以在 github 看到各種套件 / 工具都是用熟悉的語言開發，這真的是一種很讓人開心的事，雖然 90% 的情況下都不會點進去看。但是好像自己也看得懂的那種感覺，真的要體會才知道。
+環境部署原來可以這麼容易 可以不用安裝 .net framework，專案編譯完打包居然丟上去 server 就可以跑。而且只要一個檔案。相對應也節省下了 devops 設定 CI/CD 的繁瑣程度，尤其是當編譯出來檔案需要發佈到多台機器運行環境上的時候。
+ 在 docker 火熱的今天，假設開發後專案都打包成 docker 才做發佈的動作，其實就一樣享有 go 發佈的好處，可以執行於多種運行環境，而且只需要一個二進制檔案就可以上傳到多組環境。
+ 建置速度超快 用 go 開發的專案好多 可以在 github 看到各種套件 / 工具都是用熟悉的語言開發，這真的是一種很讓人開心的事，雖然 90% 的情況下都不會點進去看。但是好像自己也看得懂的那種感覺，真的要體會才知道。
 最難以適應的部分 找不到相對應的套件 一開始開發還是使用 web api 的模式，這時候找習慣的對應套件並不是那麼容易，也沒有一套真正主流的 framework。當看到套件控管的部分，dep / vgo / go vendor 還有一堆，各家大神也都擁護不同的工具，真的會有一種無所適從的感覺。</p>
 				
 			
@@ -388,8 +389,8 @@
 <p>monolithic vs microservices 以往在建構大型系統的時候，本來也就是會區分成多個部分來進行。像是常見的金流物流系統，就是將部分系統功能區分出去。microservices 則是將這種概念又更延伸到極致。
 前置作業 開始進行 microservices 至少要具備的基本建設。
 開發相關配置  服務發現 service discovery
- k8s etcd consul zookeeper Netflix/eureka  事件訊息 event sourcing messaging  kafka  系統監控 monitor
- metrics Prometheus Grafana  訊息傳遞 transport  grpc thrift http  斷路器 Circuit Breaker 紀錄追蹤 Log Tracking  opentracing zipkin  Auth  Devops  CI / CD Docker k8s  golang 相關套件  go-kit https://github.com/go-kit/kit go-micro https://github.com/micro/go-micro gizmo https://github.</p>
+ k8s etcd consul zookeeper Netflix/eureka  事件訊息(非同步訊息) event sourcing messaging  kafka NSQ  訊息傳遞(同步訊息) transport  grpc thrift http  系統監控 monitor
+ metrics Prometheus Grafana  斷路器 Circuit Breaker 紀錄追蹤 Log Tracking  opentracing zipkin  Auth  Devops  CI / CD Docker k8s  golang 相關套件  go-kit https://github.com/go-kit/kit go-micro https://github.</p>
 				
 			
 		
@@ -819,20 +820,20 @@ hugo new site &lt;SiteName&gt;  就會建立出預設的檔案目錄
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1530503966"></script>
-    <script src="/js/perfect-scrollbar.min.js?1530503966"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1530503966"></script>
-    <script src="/js/jquery.sticky.js?1530503966"></script>
-    <script src="/js/featherlight.min.js?1530503966"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1530503966"></script>
-    <script src="/js/highlight.pack.js?1530503966"></script>
+    <script src="/js/clipboard.min.js?1530573900"></script>
+    <script src="/js/perfect-scrollbar.min.js?1530573900"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1530573900"></script>
+    <script src="/js/jquery.sticky.js?1530573900"></script>
+    <script src="/js/featherlight.min.js?1530573900"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1530573900"></script>
+    <script src="/js/highlight.pack.js?1530573900"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1530503966"></script>
-    <script src="/js/learn.js?1530503966"></script>
-    <script src="/js/hugo-learn.js?1530503966"></script>
+    <script src="/js/modernizr.custom.71422.js?1530573900"></script>
+    <script src="/js/learn.js?1530573900"></script>
+    <script src="/js/hugo-learn.js?1530573900"></script>
 
-    <link href="/mermaid/mermaid.css?1530503966" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1530503966"></script>
+    <link href="/mermaid/mermaid.css?1530573900" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1530573900"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

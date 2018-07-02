@@ -12,19 +12,19 @@
     <title>開始 microservices :: Mason Chu</title>
     
     
-    <link href="/css/nucleus.css?1530503966" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1530503966" rel="stylesheet">
-    <link href="/css/hybrid.css?1530503966" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1530503966" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1530503966" rel="stylesheet">
-    <link href="/css/auto-complete.css?1530503966" rel="stylesheet">
-    <link href="/css/theme.css?1530503966" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1530503966" rel="stylesheet">
+    <link href="/css/nucleus.css?1530573900" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1530573900" rel="stylesheet">
+    <link href="/css/hybrid.css?1530573900" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1530573900" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1530573900" rel="stylesheet">
+    <link href="/css/auto-complete.css?1530573900" rel="stylesheet">
+    <link href="/css/theme.css?1530573900" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1530573900" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1530503966" rel="stylesheet">
+      <link href="/css/theme-blue.css?1530573900" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1530503966"></script>
+    <script src="/js/jquery-2.x.min.js?1530573900"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1530503966"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1530503966"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1530573900"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1530573900"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1530503966"></script>
+<script type="text/javascript" src="/js/search.js?1530573900"></script>
 
     
   </div>
@@ -371,15 +371,24 @@
 <li>服務發現 service discovery<br />
 
 <ol>
-<li>k8s etcd</li>
+<li>k8s</li>
+<li>etcd</li>
 <li>consul</li>
 <li>zookeeper</li>
 <li>Netflix/eureka</li>
 </ol></li>
-<li>事件訊息 event sourcing messaging
+<li>事件訊息(非同步訊息) event sourcing messaging
 
 <ol>
 <li>kafka</li>
+<li>NSQ</li>
+</ol></li>
+<li>訊息傳遞(同步訊息) transport
+
+<ol>
+<li>grpc</li>
+<li>thrift</li>
+<li>http</li>
 </ol></li>
 <li>系統監控 monitor<br />
 
@@ -387,13 +396,6 @@
 <li>metrics</li>
 <li>Prometheus</li>
 <li>Grafana</li>
-</ol></li>
-<li>訊息傳遞 transport
-
-<ol>
-<li>grpc</li>
-<li>thrift</li>
-<li>http</li>
 </ol></li>
 <li>斷路器 Circuit Breaker</li>
 <li>紀錄追蹤 Log Tracking
@@ -617,20 +619,20 @@ microservices cause technical problems</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1530503966"></script>
-    <script src="/js/perfect-scrollbar.min.js?1530503966"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1530503966"></script>
-    <script src="/js/jquery.sticky.js?1530503966"></script>
-    <script src="/js/featherlight.min.js?1530503966"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1530503966"></script>
-    <script src="/js/highlight.pack.js?1530503966"></script>
+    <script src="/js/clipboard.min.js?1530573900"></script>
+    <script src="/js/perfect-scrollbar.min.js?1530573900"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1530573900"></script>
+    <script src="/js/jquery.sticky.js?1530573900"></script>
+    <script src="/js/featherlight.min.js?1530573900"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1530573900"></script>
+    <script src="/js/highlight.pack.js?1530573900"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1530503966"></script>
-    <script src="/js/learn.js?1530503966"></script>
-    <script src="/js/hugo-learn.js?1530503966"></script>
+    <script src="/js/modernizr.custom.71422.js?1530573900"></script>
+    <script src="/js/learn.js?1530573900"></script>
+    <script src="/js/hugo-learn.js?1530573900"></script>
 
-    <link href="/mermaid/mermaid.css?1530503966" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1530503966"></script>
+    <link href="/mermaid/mermaid.css?1530573900" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1530573900"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
