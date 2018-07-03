@@ -24,17 +24,17 @@ gvm install go1.4 --binary # 直接安裝 binary gvm use go1.4 # 使用 go1.4 �
     </item>
     
     <item>
-      <title>Cobra 強大的 Golang 命令列工具</title>
-      <link>https://masonchu.github.io/golang/golang-cobra/</link>
-      <pubDate>Wed, 27 Jun 2018 12:49:40 +0800</pubDate>
+      <title>在本機安裝 Minikube</title>
+      <link>https://masonchu.github.io/kubernetes/install-minikube-locally/</link>
+      <pubDate>Tue, 03 Jul 2018 09:56:18 +0800</pubDate>
       
-      <guid>https://masonchu.github.io/golang/golang-cobra/</guid>
-      <description>基本介紹 Cobra 是一套可以快速可以快速建立 golang CLI 工具的套件。在 golang 的生態圈內到處都可以看到相關的痕跡。最有名的包含 docker, k8s 都使用 cobra 處理 CLI 介面。
-使用方法 安裝 如果已經準備好 go 的環境，只需要執行 go get 就可以將 cobra 加入安裝。
-go get -u github.com/spf13/cobra/cobra  建立根命令 cobra init   注意如果目錄下已經有檔案會出現 Cobra will not create a new project in a non empty directory，這時候新開目錄建立之後把全部資料移過來就可以。（需要修改 main.go import 路徑）
- 應該會建立以下檔案 + cmd
-root.go + main.go
-package main func main() { cmd.Execute() }  這時候只要執行 go run main.</description>
+      <guid>https://masonchu.github.io/kubernetes/install-minikube-locally/</guid>
+      <description>minikube 是 kubernetes 社群推出的的一個輕量型工具，用於在本地端建置模擬 kubernetes 功能。minikube 支援以下幾種 vm driver。
+ virtualbox(預設值) vmwarefusion kvm2 kvm hyperkit   後續內容預設使用 macOS + virtualbox。
+ 安裝 VM 安裝 kubectl brew install kubernetes-cli  確定安裝版本
+kubectl version   如果還沒有啟動 Minikube 這時候會出現 The connection to the server localhost:8080 was refused 的訊息。
+ 安裝 Minikube curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.28.0/minikube-darwin-amd64 &amp;amp;&amp;amp; chmod +x minikube &amp;amp;&amp;amp; sudo mv minikube /usr/local/bin/  也可以使用 homebrew 安裝
+brew cask install minikube  啟動 Minikube minikube start   如果是第一次啟動，這時候會自動下載 Minikube ISO &amp;amp; kubelet &amp;amp; kubeadm</description>
     </item>
     
     <item>
@@ -47,6 +47,20 @@ package main func main() { cmd.Execute() }  這時候只要執行 go run main.</
 下載 source code &amp;amp; 安裝相依性套件 git clone https://github.com/nsqio/nsq $GOPATH/src/github.com/nsqio/nsq cd $GOPATH/src/github.com/nsqio/nsq dep ensure  測試 &amp;amp; 編譯 ./test.sh  安裝 NSQ 安裝至 /usr/local/bin 目錄
 make install  依序啟動服務 nsqlookupd 預設監聽 http:4161 / tcp:4160，而 nsqd 啟動時自動到 nsqlookupd 註冊。
 nsqlookupd nsqd --lookupd-tcp-address=127.0.0.1:4160 nsqadmin --lookupd-http-address=127.0.0.1:4161  使用 go-nsq 發布與接受訊息 發佈環境配置 使用在 microservices 中時候，nsqd 建議並不是全部 services 共用，而是個別配置一個 localhost 的 nsqd 註冊到 nsqlookupd。</description>
+    </item>
+    
+    <item>
+      <title>Cobra 強大的 Golang 命令列工具</title>
+      <link>https://masonchu.github.io/golang/golang-cobra/</link>
+      <pubDate>Wed, 27 Jun 2018 12:49:40 +0800</pubDate>
+      
+      <guid>https://masonchu.github.io/golang/golang-cobra/</guid>
+      <description>基本介紹 Cobra 是一套可以快速可以快速建立 golang CLI 工具的套件。在 golang 的生態圈內到處都可以看到相關的痕跡。最有名的包含 docker, k8s 都使用 cobra 處理 CLI 介面。
+使用方法 安裝 如果已經準備好 go 的環境，只需要執行 go get 就可以將 cobra 加入安裝。
+go get -u github.com/spf13/cobra/cobra  建立根命令 cobra init   注意如果目錄下已經有檔案會出現 Cobra will not create a new project in a non empty directory，這時候新開目錄建立之後把全部資料移過來就可以。（需要修改 main.go import 路徑）
+ 應該會建立以下檔案 + cmd
+root.go + main.go
+package main func main() { cmd.Execute() }  這時候只要執行 go run main.</description>
     </item>
     
     <item>

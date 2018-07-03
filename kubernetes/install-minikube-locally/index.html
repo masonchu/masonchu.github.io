@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Cobra 強大的 Golang 命令列工具 :: Mason Chu</title>
+    <title>在本機安裝 Minikube :: Mason Chu</title>
     
     
     <link href="/css/nucleus.css?1530585912" rel="stylesheet">
@@ -45,7 +45,7 @@
 	gtag('config', 'UA-28614097-1');
 </script>
   </head>
-  <body class="" data-url="/golang/golang-cobra/">
+  <body class="" data-url="/kubernetes/install-minikube-locally/">
     <nav id="sidebar" class="">
 
 
@@ -85,7 +85,7 @@
   
     
     <li data-nav-id="/golang/" title="golang 開發心得" class="dd-item 
-        parent
+        
         
         
         ">
@@ -128,7 +128,7 @@
  
   
     
-      <li data-nav-id="/golang/golang-cobra/" title="Cobra 強大的 Golang 命令列工具" class="dd-item active">
+      <li data-nav-id="/golang/golang-cobra/" title="Cobra 強大的 Golang 命令列工具" class="dd-item ">
         <a href="/golang/golang-cobra/">
         Cobra 強大的 Golang 命令列工具
         
@@ -206,7 +206,7 @@
   
     
     <li data-nav-id="/kubernetes/" title="Kubernetes" class="dd-item 
-        
+        parent
         
         
         ">
@@ -230,7 +230,7 @@
  
   
     
-      <li data-nav-id="/kubernetes/install-minikube-locally/" title="在本機安裝 Minikube" class="dd-item ">
+      <li data-nav-id="/kubernetes/install-minikube-locally/" title="在本機安裝 Minikube" class="dd-item active">
         <a href="/kubernetes/install-minikube-locally/">
         <b>1. </b>在本機安裝 Minikube
         
@@ -367,7 +367,7 @@
             
           
           
-            <a href='/'>Home</a> > <a href='/golang/'>golang 開發心得</a> > Cobra 強大的 Golang 命令列工具
+            <a href='/'>Home</a> > <a href='/kubernetes/'>Kubernetes</a> > 在本機安裝 Minikube
           
          
           
@@ -383,15 +383,14 @@
 <ul>
 <li>
 <ul>
-<li><a href="#基本介紹">基本介紹</a></li>
-<li><a href="#使用方法">使用方法</a>
+<li><a href="#安裝-vm">安裝 VM</a></li>
+<li><a href="#安裝-kubectl">安裝 kubectl</a></li>
+<li><a href="#安裝-minikube">安裝 Minikube</a>
 <ul>
-<li><a href="#安裝">安裝</a></li>
-<li><a href="#建立根命令">建立根命令</a></li>
-<li><a href="#加入額外命令">加入額外命令</a></li>
-<li><a href="#使用外部參數">使用外部參數</a></li>
+<li><a href="#啟動-minikube">啟動 Minikube</a></li>
+<li><a href="#啟動-minikube-儀表板">啟動 Minikube 儀表板</a></li>
 </ul></li>
-<li><a href="#reference">Reference</a></li>
+<li><a href="#reference">reference</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -406,7 +405,7 @@
         
         <div id="body-inner">
           
-            <h1>Cobra 強大的 Golang 命令列工具</h1>
+            <h1>在本機安裝 Minikube</h1>
           
 
         
@@ -414,62 +413,65 @@
 
 
 
-<h2 id="基本介紹">基本介紹</h2>
+<p>minikube 是 kubernetes 社群推出的的一個輕量型工具，用於在本地端建置模擬 kubernetes 功能。minikube 支援以下幾種 vm driver。</p>
 
-<p>Cobra 是一套可以快速可以快速建立 golang CLI 工具的套件。在 golang 的生態圈內到處都可以看到相關的痕跡。最有名的包含 docker, k8s 都使用 cobra 處理 CLI 介面。</p>
+<ol>
+<li>virtualbox(預設值)</li>
+<li>vmwarefusion</li>
+<li>kvm2</li>
+<li>kvm</li>
+<li>hyperkit</li>
+</ol>
 
-<h2 id="使用方法">使用方法</h2>
+<blockquote>
+<p>後續內容預設使用 macOS + virtualbox。</p>
+</blockquote>
 
-<h3 id="安裝">安裝</h3>
+<h2 id="安裝-vm">安裝 VM</h2>
 
-<p>如果已經準備好 go 的環境，只需要執行 go get 就可以將 cobra 加入安裝。</p>
+<h2 id="安裝-kubectl">安裝 kubectl</h2>
 
-<pre><code>go get -u github.com/spf13/cobra/cobra
+<pre><code>brew install kubernetes-cli
 </code></pre>
 
-<h3 id="建立根命令">建立根命令</h3>
+<p>確定安裝版本</p>
 
-<pre><code>cobra init
+<pre><code>kubectl version
 </code></pre>
 
 <blockquote>
-<p>注意如果目錄下已經有檔案會出現 Cobra will not create a new project in a non empty directory，這時候新開目錄建立之後把全部資料移過來就可以。（需要修改 main.go import 路徑）</p>
+<p>如果還沒有啟動 Minikube 這時候會出現 The connection to the server localhost:8080 was refused 的訊息。</p>
 </blockquote>
 
-<p>應該會建立以下檔案
-+ cmd<br />
-  root.go
-+ main.go</p>
+<h2 id="安裝-minikube">安裝 Minikube</h2>
 
-<pre><code>package main
-
-func main() {
-	cmd.Execute()
-}
+<pre><code>curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.28.0/minikube-darwin-amd64 &amp;&amp; chmod +x minikube &amp;&amp; sudo mv minikube /usr/local/bin/
 </code></pre>
 
-<p>這時候只要執行 <code>go run main.go</code> 就會顯示 cobra 預設的 CLI 指令。</p>
+<p>也可以使用 homebrew 安裝</p>
 
-<pre><code>A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.
+<pre><code>brew cask install minikube
 </code></pre>
 
-<h3 id="加入額外命令">加入額外命令</h3>
+<h3 id="啟動-minikube">啟動 Minikube</h3>
 
-<pre><code>cobra add &lt;command name&gt;
+<pre><code>minikube start
 </code></pre>
 
-<h3 id="使用外部參數">使用外部參數</h3>
+<blockquote>
+<p>如果是第一次啟動，這時候會自動下載 Minikube ISO &amp; kubelet &amp; kubeadm</p>
+</blockquote>
 
-<p>預設使用 viper 套件處理環境變數。</p>
+<h3 id="啟動-minikube-儀表板">啟動 Minikube 儀表板</h3>
 
-<h2 id="reference">Reference</h2>
+<pre><code>minikube dashboard
+</code></pre>
 
-<p><a href="https://github.com/spf13/cobra">https://github.com/spf13/cobra</a></p>
+<p><img src="/images/kubernetes/minikube-dashboard.png" alt="minikube dashboard" /></p>
+
+<h2 id="reference">reference</h2>
+
+<p><a href="https://kubernetes.io/docs/setup/minikube/#minikube-features">https://kubernetes.io/docs/setup/minikube/#minikube-features</a></p>
 
 
 <footer class=" footline" >
@@ -523,6 +525,8 @@ to quickly create a Cobra application.
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -536,9 +540,6 @@ to quickly create a Cobra application.
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -550,42 +551,6 @@ to quickly create a Cobra application.
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
                         
             
@@ -643,6 +608,43 @@ to quickly create a Cobra application.
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -677,10 +679,10 @@ to quickly create a Cobra application.
 
 
         
-            <a class="nav nav-prev" href="/golang/gvm-go-version/" title="使用 GVM 管理 go 版本"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/kubernetes/" title="Kubernetes"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/microservices/" title="開始微服務架構" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/post/" title="posts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

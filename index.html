@@ -12,19 +12,19 @@
     <title>Home :: Mason Chu</title>
     
     
-    <link href="/css/nucleus.css?1530576626" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1530576626" rel="stylesheet">
-    <link href="/css/hybrid.css?1530576626" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1530576626" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1530576626" rel="stylesheet">
-    <link href="/css/auto-complete.css?1530576626" rel="stylesheet">
-    <link href="/css/theme.css?1530576626" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1530576626" rel="stylesheet">
+    <link href="/css/nucleus.css?1530585912" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1530585912" rel="stylesheet">
+    <link href="/css/hybrid.css?1530585912" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1530585912" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1530585912" rel="stylesheet">
+    <link href="/css/auto-complete.css?1530585912" rel="stylesheet">
+    <link href="/css/theme.css?1530585912" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1530585912" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1530576626" rel="stylesheet">
+      <link href="/css/theme-blue.css?1530585912" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1530576626"></script>
+    <script src="/js/jquery-2.x.min.js?1530585912"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1530576626"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1530576626"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1530585912"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1530585912"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1530576626"></script>
+<script type="text/javascript" src="/js/search.js?1530585912"></script>
 
     
   </div>
@@ -182,6 +182,57 @@
       <li data-nav-id="/microservices/install-and-start-nsq/" title="安裝和啟用 NSQ 服務" class="dd-item ">
         <a href="/microservices/install-and-start-nsq/">
         安裝和啟用 NSQ 服務
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/kubernetes/" title="Kubernetes" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/kubernetes/">
+          Kubernetes
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/kubernetes/install-minikube-locally/" title="在本機安裝 Minikube" class="dd-item ">
+        <a href="/kubernetes/install-minikube-locally/">
+        <b>1. </b>在本機安裝 Minikube
         
         </a>
     </li>
@@ -386,10 +437,10 @@
 
 			
 				
-<p>單體式架構 vs 微服務架構 前置作業 開始進行 microservices 至少要具備的基本建設。
+<p>前置作業 開始進行 microservices 至少要具備的基本建設。
 開發相關配置  服務發現 service discovery
  k8s etcd consul zookeeper Netflix/eureka  事件訊息(非同步訊息) event sourcing messaging  kafka NSQ  訊息傳遞(同步訊息) transport  grpc thrift http  系統監控 monitor
- metrics Prometheus Grafana  斷路器 Circuit Breaker 紀錄追蹤 Log Tracking  opentracing zipkin  Auth  Devops  CI / CD Docker k8s  golang 相關套件  go-kit https://github.com/go-kit/kit go-micro https://github.com/micro/go-micro gizmo https://github.</p>
+ metrics Prometheus Grafana  斷路器 Circuit Breaker 紀錄追蹤 Log Tracking  opentracing zipkin  Auth  Devops  CI / CD Docker k8s  golang 相關套件  go-kit https://github.com/go-kit/kit go-micro https://github.com/micro/go-micro gizmo https://github.com/nytimes/gizmo rpcx https://github.com/smallnest/rpcx  造成延伸問題 microservices solve organizational problems</p>
 				
 			
 		
@@ -463,7 +514,7 @@ gvm install go1.4 --binary # 直接安裝 binary gvm use go1.4 # 使用 go1.4 �
 	
 
 <h2>
-<a href="/golang/golang-cobra/" >Cobra 強大的 Golang 命令列工具</a>
+<a href="/kubernetes/install-minikube-locally/" >在本機安裝 Minikube</a>
 </h2>
 
 
@@ -474,12 +525,12 @@ gvm install go1.4 --binary # 直接安裝 binary gvm use go1.4 # 使用 go1.4 �
 
 			
 				
-<p>基本介紹 Cobra 是一套可以快速可以快速建立 golang CLI 工具的套件。在 golang 的生態圈內到處都可以看到相關的痕跡。最有名的包含 docker, k8s 都使用 cobra 處理 CLI 介面。
-使用方法 安裝 如果已經準備好 go 的環境，只需要執行 go get 就可以將 cobra 加入安裝。
-go get -u github.com/spf13/cobra/cobra  建立根命令 cobra init   注意如果目錄下已經有檔案會出現 Cobra will not create a new project in a non empty directory，這時候新開目錄建立之後把全部資料移過來就可以。（需要修改 main.go import 路徑）
- 應該會建立以下檔案 + cmd
-root.go + main.go
-package main func main() { cmd.Execute() }  這時候只要執行 go run main.</p>
+<p>minikube 是 kubernetes 社群推出的的一個輕量型工具，用於在本地端建置模擬 kubernetes 功能。minikube 支援以下幾種 vm driver。
+ virtualbox(預設值) vmwarefusion kvm2 kvm hyperkit   後續內容預設使用 macOS + virtualbox。
+ 安裝 VM 安裝 kubectl brew install kubernetes-cli  確定安裝版本
+kubectl version   如果還沒有啟動 Minikube 這時候會出現 The connection to the server localhost:8080 was refused 的訊息。
+ 安裝 Minikube curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.28.0/minikube-darwin-amd64 &amp;&amp; chmod +x minikube &amp;&amp; sudo mv minikube /usr/local/bin/  也可以使用 homebrew 安裝
+brew cask install minikube  啟動 Minikube minikube start   如果是第一次啟動，這時候會自動下載 Minikube ISO &amp; kubelet &amp; kubeadm</p>
 				
 			
 		
@@ -524,6 +575,93 @@ package main func main() { cmd.Execute() }  這時候只要執行 go run main.</
 下載 source code &amp; 安裝相依性套件 git clone https://github.com/nsqio/nsq $GOPATH/src/github.com/nsqio/nsq cd $GOPATH/src/github.com/nsqio/nsq dep ensure  測試 &amp; 編譯 ./test.sh  安裝 NSQ 安裝至 /usr/local/bin 目錄
 make install  依序啟動服務 nsqlookupd 預設監聽 http:4161 / tcp:4160，而 nsqd 啟動時自動到 nsqlookupd 註冊。
 nsqlookupd nsqd --lookupd-tcp-address=127.0.0.1:4160 nsqadmin --lookupd-http-address=127.0.0.1:4161  使用 go-nsq 發布與接受訊息 發佈環境配置 使用在 microservices 中時候，nsqd 建議並不是全部 services 共用，而是個別配置一個 localhost 的 nsqd 註冊到 nsqlookupd。</p>
+				
+			
+		
+
+		
+			
+
+	
+    
+    
+
+	
+		
+	
+
+	
+
+			
+
+		
+	
+		
+  
+
+
+	
+	
+
+<h2>
+<a href="/kubernetes/" >Kubernetes</a>
+</h2>
+
+
+
+
+
+
+
+			
+				
+<p></p>
+				
+			
+		
+
+		
+			
+
+	
+    
+    
+
+	
+		
+	
+
+	
+
+			
+
+		
+	
+		
+  
+
+
+	
+	
+
+<h2>
+<a href="/golang/golang-cobra/" >Cobra 強大的 Golang 命令列工具</a>
+</h2>
+
+
+
+
+
+
+
+			
+				
+<p>基本介紹 Cobra 是一套可以快速可以快速建立 golang CLI 工具的套件。在 golang 的生態圈內到處都可以看到相關的痕跡。最有名的包含 docker, k8s 都使用 cobra 處理 CLI 介面。
+使用方法 安裝 如果已經準備好 go 的環境，只需要執行 go get 就可以將 cobra 加入安裝。
+go get -u github.com/spf13/cobra/cobra  建立根命令 cobra init   注意如果目錄下已經有檔案會出現 Cobra will not create a new project in a non empty directory，這時候新開目錄建立之後把全部資料移過來就可以。（需要修改 main.go import 路徑）
+ 應該會建立以下檔案 + cmd
+root.go + main.go
+package main func main() { cmd.Execute() }  這時候只要執行 go run main.</p>
 				
 			
 		
@@ -802,6 +940,38 @@ hugo new site &lt;SiteName&gt;  就會建立出預設的檔案目錄
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
         
@@ -819,20 +989,20 @@ hugo new site &lt;SiteName&gt;  就會建立出預設的檔案目錄
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1530576626"></script>
-    <script src="/js/perfect-scrollbar.min.js?1530576626"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1530576626"></script>
-    <script src="/js/jquery.sticky.js?1530576626"></script>
-    <script src="/js/featherlight.min.js?1530576626"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1530576626"></script>
-    <script src="/js/highlight.pack.js?1530576626"></script>
+    <script src="/js/clipboard.min.js?1530585912"></script>
+    <script src="/js/perfect-scrollbar.min.js?1530585912"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1530585912"></script>
+    <script src="/js/jquery.sticky.js?1530585912"></script>
+    <script src="/js/featherlight.min.js?1530585912"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1530585912"></script>
+    <script src="/js/highlight.pack.js?1530585912"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1530576626"></script>
-    <script src="/js/learn.js?1530576626"></script>
-    <script src="/js/hugo-learn.js?1530576626"></script>
+    <script src="/js/modernizr.custom.71422.js?1530585912"></script>
+    <script src="/js/learn.js?1530585912"></script>
+    <script src="/js/hugo-learn.js?1530585912"></script>
 
-    <link href="/mermaid/mermaid.css?1530576626" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1530576626"></script>
+    <link href="/mermaid/mermaid.css?1530585912" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1530585912"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
