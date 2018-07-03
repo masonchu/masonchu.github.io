@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>開始 microservices on Mason Chu</title>
+    <title>開始微服務架構 on Mason Chu</title>
     <link>https://masonchu.github.io/microservices/</link>
-    <description>Recent content in 開始 microservices on Mason Chu</description>
+    <description>Recent content in 開始微服務架構 on Mason Chu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
     <lastBuildDate>Fri, 29 Jun 2018 11:03:34 +0800</lastBuildDate>
