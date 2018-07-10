@@ -12,19 +12,19 @@
     <title>使用 GVM 管理 go 版本 :: Mason Chu</title>
     
     
-    <link href="/css/nucleus.css?1530618149" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1530618149" rel="stylesheet">
-    <link href="/css/hybrid.css?1530618149" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1530618149" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1530618149" rel="stylesheet">
-    <link href="/css/auto-complete.css?1530618149" rel="stylesheet">
-    <link href="/css/theme.css?1530618149" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1530618149" rel="stylesheet">
+    <link href="/css/nucleus.css?1531197398" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1531197398" rel="stylesheet">
+    <link href="/css/hybrid.css?1531197398" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1531197398" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1531197398" rel="stylesheet">
+    <link href="/css/auto-complete.css?1531197398" rel="stylesheet">
+    <link href="/css/theme.css?1531197398" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1531197398" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1530618149" rel="stylesheet">
+      <link href="/css/theme-blue.css?1531197398" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1530618149"></script>
+    <script src="/js/jquery-2.x.min.js?1531197398"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1530618149"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1530618149"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1531197398"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1531197398"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1530618149"></script>
+<script type="text/javascript" src="/js/search.js?1531197398"></script>
 
     
   </div>
@@ -232,7 +232,7 @@
     
       <li data-nav-id="/kubernetes/install-minikube-locally/" title="在本機安裝 Minikube" class="dd-item ">
         <a href="/kubernetes/install-minikube-locally/">
-        <b>1. </b>在本機安裝 Minikube
+        在本機安裝 Minikube
         
         </a>
     </li>
@@ -256,13 +256,13 @@
  
   
     
-    <li data-nav-id="/post/" title="posts" class="dd-item 
+    <li data-nav-id="/devops/" title="devops" class="dd-item 
         
         
         
         ">
-      <a href="/post/">
-          posts
+      <a href="/devops/">
+          devops
           
       </a>
       
@@ -281,8 +281,8 @@
  
   
     
-      <li data-nav-id="/post/first-hugo/" title="第一次使用 Hugo 就上手" class="dd-item ">
-        <a href="/post/first-hugo/">
+      <li data-nav-id="/devops/first-hugo/" title="第一次使用 Hugo 就上手" class="dd-item ">
+        <a href="/devops/first-hugo/">
         第一次使用 Hugo 就上手
         
         </a>
@@ -387,7 +387,7 @@
 <li><a href="#安裝-gvm">安裝 GVM</a></li>
 <li><a href="#首次使用-gvm">首次使用 GVM</a></li>
 <li><a href="#常用指令">常用指令</a></li>
-<li><a href="#reference">Reference</a></li>
+<li><a href="#ref">ref</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -431,8 +431,14 @@
 <pre><code>gvm install go1.4 --binary # 直接安裝 binary
 gvm use go1.4 # 使用 go1.4 的環境
 export GOROOTBOOTSTRAP=$GOROOT # 設定 $GOROOTBOOTSTRAP
-gvm install go1.6 # 安裝 Go 1.6
-Installing go1.6...
+gvm install go1.10.3 # 安裝 Go go1.10.3
+Installing go1.10.3...
+</code></pre>
+
+<pre><code>gvm install go1.4 --binary
+gvm use go1.4
+export GOROOTBOOTSTRAP=$GOROOT
+gvm install go1.10.3
 </code></pre>
 
 <h2 id="常用指令">常用指令</h2>
@@ -442,7 +448,7 @@ gvm listall	- 列出線上可安裝版本
 gvm use		- 切換使用特定版本
 </code></pre>
 
-<h2 id="reference">Reference</h2>
+<h2 id="ref">ref</h2>
 
 <p><a href="https://github.com/moovweb/gvm">https://github.com/moovweb/gvm</a><br />
 <a href="https://blog.longwin.com.tw/2016/11/golang-gvm-go-version-manager-install-2016/">https://blog.longwin.com.tw/2016/11/golang-gvm-go-version-manager-install-2016/</a></p>
@@ -662,20 +668,20 @@ gvm use		- 切換使用特定版本
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1530618149"></script>
-    <script src="/js/perfect-scrollbar.min.js?1530618149"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1530618149"></script>
-    <script src="/js/jquery.sticky.js?1530618149"></script>
-    <script src="/js/featherlight.min.js?1530618149"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1530618149"></script>
-    <script src="/js/highlight.pack.js?1530618149"></script>
+    <script src="/js/clipboard.min.js?1531197398"></script>
+    <script src="/js/perfect-scrollbar.min.js?1531197398"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1531197398"></script>
+    <script src="/js/jquery.sticky.js?1531197398"></script>
+    <script src="/js/featherlight.min.js?1531197398"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1531197398"></script>
+    <script src="/js/highlight.pack.js?1531197398"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1530618149"></script>
-    <script src="/js/learn.js?1530618149"></script>
-    <script src="/js/hugo-learn.js?1530618149"></script>
+    <script src="/js/modernizr.custom.71422.js?1531197398"></script>
+    <script src="/js/learn.js?1531197398"></script>
+    <script src="/js/hugo-learn.js?1531197398"></script>
 
-    <link href="/mermaid/mermaid.css?1530618149" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1530618149"></script>
+    <link href="/mermaid/mermaid.css?1531197398" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1531197398"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

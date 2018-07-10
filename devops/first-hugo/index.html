@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>Categories :: Mason Chu</title>
+    <title>第一次使用 Hugo 就上手 :: Mason Chu</title>
     
     
     <link href="/css/nucleus.css?1531197398" rel="stylesheet">
@@ -45,7 +45,7 @@
 	gtag('config', 'UA-28614097-1');
 </script>
   </head>
-  <body class="" data-url="/categories/">
+  <body class="" data-url="/devops/first-hugo/">
     <nav id="sidebar" class="">
 
 
@@ -207,7 +207,7 @@
     
     <li data-nav-id="/kubernetes/" title="Kubernetes" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/kubernetes/">
@@ -257,7 +257,7 @@
   
     
     <li data-nav-id="/devops/" title="devops" class="dd-item 
-        
+        parent
         
         
         ">
@@ -281,7 +281,7 @@
  
   
     
-      <li data-nav-id="/devops/first-hugo/" title="第一次使用 Hugo 就上手" class="dd-item ">
+      <li data-nav-id="/devops/first-hugo/" title="第一次使用 Hugo 就上手" class="dd-item active">
         <a href="/devops/first-hugo/">
         第一次使用 Hugo 就上手
         
@@ -359,7 +359,19 @@
                     
           
           
-            Categories
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Home</a> > <a href='/devops/'>devops</a> > 第一次使用 Hugo 就上手
+          
+         
+          
+         
           
            
                   </span>
@@ -367,7 +379,31 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#基本介紹">基本介紹</a>
+<ul>
+<li><a href="#與動態的-blog-平台比較">與動態的 blog 平台比較</a>
+<ul>
+<li>
+<ul>
+<li><a href="#優點">優點</a></li>
+<li><a href="#缺點">缺點</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#第一次安裝">第一次安裝</a>
+<ul>
+<li><a href="#建議第一篇-post">建議第一篇 post</a></li>
+<li><a href="#選擇-theme">選擇 Theme</a></li>
+<li><a href="#挑選寫作工具">挑選寫作工具</a></li>
+<li><a href="#常用指令">常用指令</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -379,7 +415,7 @@
         
         <div id="body-inner">
           
-            <h1>Categories</h1>
+            <h1>第一次使用 Hugo 就上手</h1>
           
 
         
@@ -387,9 +423,70 @@
 
 
 
+<h2 id="基本介紹">基本介紹</h2>
+
+<p>Hugo 是一套生成靜態頁面的工具(static site generator)。利用 Markdown 將內容跟樣式外觀完整分開，再利用生成的靜態網頁直接發佈到 server 上。般來說 markdown 語法對應樣式種類會比較少，但是相對的也是幫助在寫作的時候專注在內容而不是樣式上。</p>
+
+<h3 id="與動態的-blog-平台比較">與動態的 blog 平台比較</h3>
+
+<h5 id="優點">優點</h5>
+
+<ol>
+<li>很容易對文章內容進行 git 版控或是多人協作<br /></li>
+<li>生成的靜態網頁瀏覽速度很快，也不需要對 server 系統依賴<br /></li>
+<li>容易互相在同類型的靜態生成工具之間轉換，只要把 markdown 的文章內容帶著走就好了<br /></li>
+</ol>
+
+<h5 id="缺點">缺點</h5>
+
+<ol>
+<li>需要熟悉 markdown , git<br /></li>
+<li>通常不會有線上編輯模式或是管理平台<br /></li>
+<li>如果想要取得流量或讀者留言需要註冊其他服務</li>
+</ol>
+
+<h2 id="第一次安裝">第一次安裝</h2>
+
+<p>如果是 mac OS 只要執行</p>
+
+<pre><code>brew install hugo
+</code></pre>
+
+<p>就可以直接安裝完成，之後進入選定好儲存檔案的目錄下</p>
+
+<pre><code>hugo new site &lt;SiteName&gt;
+</code></pre>
+
+<p>就會建立出預設的檔案目錄</p>
+
+<h3 id="建議第一篇-post">建議第一篇 post</h3>
+
+<pre><code>hugo new post/my-first-post.md
+</code></pre>
+
+<p>建立後的 md 檔案產生在 content/post 目錄</p>
+
+<h3 id="選擇-theme">選擇 Theme</h3>
+
+<h3 id="挑選寫作工具">挑選寫作工具</h3>
+
+<h3 id="常用指令">常用指令</h3>
+
+<pre><code>// 建立可以發佈的靜態檔案
+hugo
+// 建立 local 端 server 連同草稿
+hugo server --buildDrafts 
+</code></pre>
+
+<hr />
+
+<p>Hugo 官網說明文件 <a href="https://gohugo.io/overview/quickstart/">https://gohugo.io/overview/quickstart/</a></p>
+
+
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -552,6 +649,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -565,6 +663,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -585,6 +684,8 @@
         
 
 
+        
+            <a class="nav nav-prev" href="/devops/" title="devops"> <i class="fa fa-chevron-left"></i></a>
         
         
             <a class="nav nav-next" href="/golang/" title="golang 開發心得" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -616,3 +717,4 @@
     
   </body>
 </html>
+

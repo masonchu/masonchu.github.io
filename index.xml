@@ -20,7 +20,7 @@
       <description>基本介紹 GVM 是一套管理 golang 版本的套件，類似於 nodeJS / nvm。
 安裝 GVM bash &amp;lt; &amp;lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)  安裝之後應該會在 bashrc 下加入 source 的指令，如果安裝完還是找不到 gvm 指令就需要檢查一下這塊。
 source &amp;quot;/Users/&amp;lt;username&amp;gt;/.gvm/scripts/gvm&amp;quot;  首次使用 GVM 使用 GVM 安裝 Go1.4 與之後版本。go1.4 版本之後使用 go 對自己編譯，因此沒有安裝 go 的狀況下之後的版本都是無法編譯的。
-gvm install go1.4 --binary # 直接安裝 binary gvm use go1.4 # 使用 go1.4 的環境 export GOROOTBOOTSTRAP=$GOROOT # 設定 $GOROOTBOOTSTRAP gvm install go1.6 # 安裝 Go 1.6 Installing go1.6...  常用指令 gvm list	- 列出全部已經安裝的版本 gvm listall	- 列出線上可安裝版本 gvm use	- 切換使用特定版本  Reference https://github.</description>
+gvm install go1.4 --binary # 直接安裝 binary gvm use go1.4 # 使用 go1.4 的環境 export GOROOTBOOTSTRAP=$GOROOT # 設定 $GOROOTBOOTSTRAP gvm install go1.10.3 # 安裝 Go go1.10.3 Installing go1.10.3...  gvm install go1.</description>
     </item>
     
     <item>
@@ -65,10 +65,10 @@ package main func main() { cmd.Execute() }  這時候只要執行 go run main.</
     
     <item>
       <title>第一次使用 Hugo 就上手</title>
-      <link>https://masonchu.github.io/post/first-hugo/</link>
+      <link>https://masonchu.github.io/devops/first-hugo/</link>
       <pubDate>Wed, 05 Jul 2017 12:35:25 +0800</pubDate>
       
-      <guid>https://masonchu.github.io/post/first-hugo/</guid>
+      <guid>https://masonchu.github.io/devops/first-hugo/</guid>
       <description>基本介紹 Hugo 是一套生成靜態頁面的工具(static site generator)。利用 Markdown 將內容跟樣式外觀完整分開，再利用生成的靜態網頁直接發佈到 server 上。般來說 markdown 語法對應樣式種類會比較少，但是相對的也是幫助在寫作的時候專注在內容而不是樣式上。
 與動態的 blog 平台比較 優點  很容易對文章內容進行 git 版控或是多人協作
  生成的靜態網頁瀏覽速度很快，也不需要對 server 系統依賴
