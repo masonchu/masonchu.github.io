@@ -33,8 +33,8 @@ gvm install go1.4 --binary # 直接安裝 binary gvm use go1.4 # 使用 go1.4 �
  virtualbox(預設值) vmwarefusion kvm2 kvm hyperkit   後續內容預設使用 macOS + virtualbox。
  安裝 VM 安裝 kubectl brew install kubernetes-cli  確定安裝版本
 kubectl version   如果還沒有啟動 Minikube 這時候會出現 The connection to the server localhost:8080 was refused 的訊息。
- 安裝 Minikube curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.28.0/minikube-darwin-amd64 &amp;amp;&amp;amp; chmod +x minikube &amp;amp;&amp;amp; sudo mv minikube /usr/local/bin/  也可以使用 homebrew 安裝
-brew cask install minikube  啟動 Minikube minikube start   如果是第一次啟動，這時候會自動下載 Minikube ISO &amp;amp; kubelet &amp;amp; kubeadm</description>
+ 安裝 minikube curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.28.0/minikube-darwin-amd64 &amp;amp;&amp;amp; chmod +x minikube &amp;amp;&amp;amp; sudo mv minikube /usr/local/bin/  也可以使用 homebrew 安裝
+brew cask install minikube  啟動 minikube minikube start   如果是第一次啟動，這時候會自動下載 Minikube ISO &amp;amp; kubelet &amp;amp; kubeadm</description>
     </item>
     
     <item>

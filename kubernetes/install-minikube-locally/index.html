@@ -12,19 +12,19 @@
     <title>在本機安裝 Minikube :: Mason Chu</title>
     
     
-    <link href="/css/nucleus.css?1531197398" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1531197398" rel="stylesheet">
-    <link href="/css/hybrid.css?1531197398" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1531197398" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1531197398" rel="stylesheet">
-    <link href="/css/auto-complete.css?1531197398" rel="stylesheet">
-    <link href="/css/theme.css?1531197398" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1531197398" rel="stylesheet">
+    <link href="/css/nucleus.css?1533110253" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1533110253" rel="stylesheet">
+    <link href="/css/hybrid.css?1533110253" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1533110253" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1533110253" rel="stylesheet">
+    <link href="/css/auto-complete.css?1533110253" rel="stylesheet">
+    <link href="/css/theme.css?1533110253" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1533110253" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1531197398" rel="stylesheet">
+      <link href="/css/theme-blue.css?1533110253" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1531197398"></script>
+    <script src="/js/jquery-2.x.min.js?1533110253"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1531197398"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1531197398"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1533110253"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1533110253"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1531197398"></script>
+<script type="text/javascript" src="/js/search.js?1533110253"></script>
 
     
   </div>
@@ -385,9 +385,9 @@
 <ul>
 <li><a href="#安裝-vm">安裝 VM</a></li>
 <li><a href="#安裝-kubectl">安裝 kubectl</a></li>
-<li><a href="#安裝-minikube">安裝 Minikube</a>
+<li><a href="#安裝-minikube">安裝 minikube</a>
 <ul>
-<li><a href="#啟動-minikube">啟動 Minikube</a></li>
+<li><a href="#啟動-minikube">啟動 minikube</a></li>
 <li><a href="#啟動-minikube-儀表板">啟動 Minikube 儀表板</a></li>
 </ul></li>
 <li><a href="#部署到-docker-image-minikube">部署到 Docker Image Minikube</a></li>
@@ -444,7 +444,7 @@
 <p>如果還沒有啟動 Minikube 這時候會出現 The connection to the server localhost:8080 was refused 的訊息。</p>
 </blockquote>
 
-<h2 id="安裝-minikube">安裝 Minikube</h2>
+<h2 id="安裝-minikube">安裝 minikube</h2>
 
 <pre><code>curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.28.0/minikube-darwin-amd64 &amp;&amp; chmod +x minikube &amp;&amp; sudo mv minikube /usr/local/bin/
 </code></pre>
@@ -454,14 +454,16 @@
 <pre><code>brew cask install minikube
 </code></pre>
 
-<h3 id="啟動-minikube">啟動 Minikube</h3>
+<h3 id="啟動-minikube">啟動 minikube</h3>
 
 <pre><code>minikube start
 </code></pre>
 
 <blockquote>
 <p>如果是第一次啟動，這時候會自動下載 Minikube ISO &amp; kubelet &amp; kubeadm</p>
-</blockquote>
+
+<pre><code>minikube start --kubernetes-version v1.10.0
+</code></pre>
 
 <h3 id="啟動-minikube-儀表板">啟動 Minikube 儀表板</h3>
 
@@ -476,6 +478,7 @@
 
 <pre><code>kubectl run hello-minikube --image=gcr.io/google_containers/echoserver:1.4 --port=8080
 </code></pre>
+</blockquote>
 
 <p>將資源暴露為新的 Kubernetes Service</p>
 
@@ -487,11 +490,19 @@
 <pre><code>minikube service hello-minikube --url
 </code></pre>
 
+<p>當建立 pods 的時候如果有發生 <code>Insufficient memory / CPU</code> 的錯誤，可以試著給 minikube 更多資源。</p>
+
+<pre><code>minikube stop &amp;&amp; minikube start --cpus 4 --memory 8192
+</code></pre>
+
 <!-- >這並不代表 service 這樣做就可以對外公開，而是只有在 minikube 上面本機檢視。 -->
 
 <h2 id="ref">ref</h2>
 
 <p><a href="https://kubernetes.io/docs/setup/minikube/#minikube-features">https://kubernetes.io/docs/setup/minikube/#minikube-features</a></p>
+
+<p>怎麼暴露本機服務給 minikube
+<a href="https://blog.fraq.io/tech/exposing-local-services-to-minikube/">https://blog.fraq.io/tech/exposing-local-services-to-minikube/</a></p>
 
 
 <footer class=" footline" >
@@ -711,20 +722,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1531197398"></script>
-    <script src="/js/perfect-scrollbar.min.js?1531197398"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1531197398"></script>
-    <script src="/js/jquery.sticky.js?1531197398"></script>
-    <script src="/js/featherlight.min.js?1531197398"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1531197398"></script>
-    <script src="/js/highlight.pack.js?1531197398"></script>
+    <script src="/js/clipboard.min.js?1533110253"></script>
+    <script src="/js/perfect-scrollbar.min.js?1533110253"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1533110253"></script>
+    <script src="/js/jquery.sticky.js?1533110253"></script>
+    <script src="/js/featherlight.min.js?1533110253"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1533110253"></script>
+    <script src="/js/highlight.pack.js?1533110253"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1531197398"></script>
-    <script src="/js/learn.js?1531197398"></script>
-    <script src="/js/hugo-learn.js?1531197398"></script>
+    <script src="/js/modernizr.custom.71422.js?1533110253"></script>
+    <script src="/js/learn.js?1533110253"></script>
+    <script src="/js/hugo-learn.js?1533110253"></script>
 
-    <link href="/mermaid/mermaid.css?1531197398" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1531197398"></script>
+    <link href="/mermaid/mermaid.css?1533110253" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1533110253"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

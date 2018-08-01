@@ -12,19 +12,19 @@
     <title>Home :: Mason Chu</title>
     
     
-    <link href="/css/nucleus.css?1531197398" rel="stylesheet">
-    <link href="/css/font-awesome.min.css?1531197398" rel="stylesheet">
-    <link href="/css/hybrid.css?1531197398" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1531197398" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1531197398" rel="stylesheet">
-    <link href="/css/auto-complete.css?1531197398" rel="stylesheet">
-    <link href="/css/theme.css?1531197398" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1531197398" rel="stylesheet">
+    <link href="/css/nucleus.css?1533110253" rel="stylesheet">
+    <link href="/css/font-awesome.min.css?1533110253" rel="stylesheet">
+    <link href="/css/hybrid.css?1533110253" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1533110253" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1533110253" rel="stylesheet">
+    <link href="/css/auto-complete.css?1533110253" rel="stylesheet">
+    <link href="/css/theme.css?1533110253" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1533110253" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1531197398" rel="stylesheet">
+      <link href="/css/theme-blue.css?1533110253" rel="stylesheet">
     
 
-    <script src="/js/jquery-2.x.min.js?1531197398"></script>
+    <script src="/js/jquery-2.x.min.js?1533110253"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -61,14 +61,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1531197398"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1531197398"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1533110253"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1533110253"></script>
 <script type="text/javascript">
     
         var baseurl = '\/';
     
 </script>
-<script type="text/javascript" src="/js/search.js?1531197398"></script>
+<script type="text/javascript" src="/js/search.js?1533110253"></script>
 
     
   </div>
@@ -361,7 +361,7 @@
 
 
 
-<ul class="children children-h2">
+<ul class="children children-h3">
 	
     
 	    
@@ -378,9 +378,9 @@
 	
 	
 
-<h2>
+<h3>
 <a href="/golang/" >golang 開發心得</a>
-</h2>
+</h3>
 
 
 
@@ -425,9 +425,9 @@
 	
 	
 
-<h2>
+<h3>
 <a href="/microservices/" >開始微服務架構</a>
-</h2>
+</h3>
 
 
 
@@ -440,7 +440,7 @@
 <p>前置作業 開始進行 microservices 至少要具備的基本建設。
 開發相關配置  服務發現 service discovery
  k8s etcd consul zookeeper Netflix/eureka  事件訊息(非同步訊息) event sourcing messaging  kafka NSQ  訊息傳遞(同步訊息) transport  grpc thrift http  系統監控 monitor
- metrics Prometheus Grafana  斷路器 Circuit Breaker 紀錄追蹤 Log Tracking  opentracing zipkin Elasticsearch Stackdriver  Auth  Devops  CI / CD Docker k8s  golang 相關套件  go-kit https://github.com/go-kit/kit go-micro https://github.com/micro/go-micro gizmo https://github.com/nytimes/gizmo rpcx https://github.</p>
+ metrics Prometheus Grafana  斷路器 Circuit Breaker Health Check 紀錄追蹤 Log Tracking  opentracing zipkin Elasticsearch Stackdriver  Auth  Devops  CI / CD Docker k8s  golang 相關套件  go-kit https://github.com/go-kit/kit go-micro https://github.com/micro/go-micro gizmo https://github.</p>
 				
 			
 		
@@ -469,9 +469,9 @@
 	
 	
 
-<h2>
+<h3>
 <a href="/golang/gvm-go-version/" >使用 GVM 管理 go 版本</a>
-</h2>
+</h3>
 
 
 
@@ -513,9 +513,9 @@ gvm install go1.4 --binary # 直接安裝 binary gvm use go1.4 # 使用 go1.4 �
 	
 	
 
-<h2>
+<h3>
 <a href="/kubernetes/install-minikube-locally/" >在本機安裝 Minikube</a>
-</h2>
+</h3>
 
 
 
@@ -529,8 +529,8 @@ gvm install go1.4 --binary # 直接安裝 binary gvm use go1.4 # 使用 go1.4 �
  virtualbox(預設值) vmwarefusion kvm2 kvm hyperkit   後續內容預設使用 macOS + virtualbox。
  安裝 VM 安裝 kubectl brew install kubernetes-cli  確定安裝版本
 kubectl version   如果還沒有啟動 Minikube 這時候會出現 The connection to the server localhost:8080 was refused 的訊息。
- 安裝 Minikube curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.28.0/minikube-darwin-amd64 &amp;&amp; chmod +x minikube &amp;&amp; sudo mv minikube /usr/local/bin/  也可以使用 homebrew 安裝
-brew cask install minikube  啟動 Minikube minikube start   如果是第一次啟動，這時候會自動下載 Minikube ISO &amp; kubelet &amp; kubeadm</p>
+ 安裝 minikube curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.28.0/minikube-darwin-amd64 &amp;&amp; chmod +x minikube &amp;&amp; sudo mv minikube /usr/local/bin/  也可以使用 homebrew 安裝
+brew cask install minikube  啟動 minikube minikube start   如果是第一次啟動，這時候會自動下載 Minikube ISO &amp; kubelet &amp; kubeadm</p>
 				
 			
 		
@@ -559,9 +559,9 @@ brew cask install minikube  啟動 Minikube minikube start   如果是第一次�
 	
 	
 
-<h2>
+<h3>
 <a href="/microservices/install-and-start-nsq/" >安裝和啟用 NSQ 服務</a>
-</h2>
+</h3>
 
 
 
@@ -603,9 +603,9 @@ nsqlookupd nsqd --lookupd-tcp-address=127.0.0.1:4160 nsqadmin --lookupd-http-add
 	
 	
 
-<h2>
+<h3>
 <a href="/kubernetes/" >Kubernetes</a>
-</h2>
+</h3>
 
 
 
@@ -644,9 +644,9 @@ nsqlookupd nsqd --lookupd-tcp-address=127.0.0.1:4160 nsqadmin --lookupd-http-add
 	
 	
 
-<h2>
+<h3>
 <a href="/golang/golang-cobra/" >Cobra 強大的 Golang 命令列工具</a>
-</h2>
+</h3>
 
 
 
@@ -690,9 +690,9 @@ package main func main() { cmd.Execute() }  這時候只要執行 go run main.</
 	
 	
 
-<h2>
+<h3>
 <a href="/devops/" >devops</a>
-</h2>
+</h3>
 
 
 
@@ -731,9 +731,9 @@ package main func main() { cmd.Execute() }  這時候只要執行 go run main.</
 	
 	
 
-<h2>
+<h3>
 <a href="/devops/first-hugo/" >第一次使用 Hugo 就上手</a>
-</h2>
+</h3>
 
 
 
@@ -989,20 +989,20 @@ hugo new site &lt;SiteName&gt;  就會建立出預設的檔案目錄
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1531197398"></script>
-    <script src="/js/perfect-scrollbar.min.js?1531197398"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1531197398"></script>
-    <script src="/js/jquery.sticky.js?1531197398"></script>
-    <script src="/js/featherlight.min.js?1531197398"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1531197398"></script>
-    <script src="/js/highlight.pack.js?1531197398"></script>
+    <script src="/js/clipboard.min.js?1533110253"></script>
+    <script src="/js/perfect-scrollbar.min.js?1533110253"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1533110253"></script>
+    <script src="/js/jquery.sticky.js?1533110253"></script>
+    <script src="/js/featherlight.min.js?1533110253"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1533110253"></script>
+    <script src="/js/highlight.pack.js?1533110253"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom.71422.js?1531197398"></script>
-    <script src="/js/learn.js?1531197398"></script>
-    <script src="/js/hugo-learn.js?1531197398"></script>
+    <script src="/js/modernizr.custom.71422.js?1533110253"></script>
+    <script src="/js/learn.js?1533110253"></script>
+    <script src="/js/hugo-learn.js?1533110253"></script>
 
-    <link href="/mermaid/mermaid.css?1531197398" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1531197398"></script>
+    <link href="/mermaid/mermaid.css?1533110253" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1533110253"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
