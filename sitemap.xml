@@ -3,118 +3,118 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.org/2018/07/install-minikube-locally/</loc>
+    <loc>https://blog.masonchu.com/2018/07/install-minikube-locally/</loc>
     <lastmod>2018-07-03T09:56:18+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/2018/06/move-to-goland/</loc>
+    <loc>https://blog.masonchu.com/2018/06/move-to-goland/</loc>
     <lastmod>2018-06-29T12:49:40+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/2018/06/start-microservices/</loc>
+    <loc>https://blog.masonchu.com/2018/06/start-microservices/</loc>
     <lastmod>2018-06-29T11:03:34+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/2018/06/golang-cobra/</loc>
+    <loc>https://blog.masonchu.com/2018/06/golang-cobra/</loc>
     <lastmod>2018-06-27T12:49:40+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/2018/06/gvm-go-version/</loc>
+    <loc>https://blog.masonchu.com/2018/06/gvm-go-version/</loc>
     <lastmod>2018-06-25T14:54:21+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/2018/06/install-and-start-nsq/</loc>
+    <loc>https://blog.masonchu.com/2018/06/install-and-start-nsq/</loc>
     <lastmod>2018-06-21T15:53:16+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/2017/07/first-hugo/</loc>
+    <loc>https://blog.masonchu.com/2017/07/first-hugo/</loc>
     <lastmod>2017-07-05T12:35:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/</loc>
+    <loc>https://blog.masonchu.com/</loc>
     <lastmod>2018-07-03T09:56:18+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/archives/</loc>
+    <loc>https://blog.masonchu.com/archives/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/categories/</loc>
+    <loc>https://blog.masonchu.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/tags/golang/</loc>
+    <loc>https://blog.masonchu.com/tags/golang/</loc>
     <lastmod>2018-06-29T12:49:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/categories/golang/</loc>
+    <loc>https://blog.masonchu.com/categories/golang/</loc>
     <lastmod>2018-06-29T12:49:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/tags/hugo/</loc>
+    <loc>https://blog.masonchu.com/tags/hugo/</loc>
     <lastmod>2017-07-05T12:35:25+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/tags/kubernetes/</loc>
+    <loc>https://blog.masonchu.com/tags/kubernetes/</loc>
     <lastmod>2018-07-03T09:56:18+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/categories/kubernetes/</loc>
+    <loc>https://blog.masonchu.com/categories/kubernetes/</loc>
     <lastmod>2018-07-03T09:56:18+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/tags/microservice/</loc>
+    <loc>https://blog.masonchu.com/tags/microservice/</loc>
     <lastmod>2018-06-21T15:53:16+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/categories/microservice/</loc>
+    <loc>https://blog.masonchu.com/categories/microservice/</loc>
     <lastmod>2018-06-21T15:53:16+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/tags/microservices/</loc>
+    <loc>https://blog.masonchu.com/tags/microservices/</loc>
     <lastmod>2018-06-29T11:03:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/categories/microservices/</loc>
+    <loc>https://blog.masonchu.com/categories/microservices/</loc>
     <lastmod>2018-06-29T11:03:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/post/</loc>
+    <loc>https://blog.masonchu.com/post/</loc>
     <lastmod>2018-07-03T09:56:18+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.org/tags/</loc>
+    <loc>https://blog.masonchu.com/tags/</loc>
     <lastmod>2018-06-29T12:49:40+08:00</lastmod>
     <priority>0</priority>
   </url>

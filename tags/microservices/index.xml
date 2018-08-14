@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microservices on </title>
-    <link>https://example.org/tags/microservices/</link>
+    <link>https://blog.masonchu.com/tags/microservices/</link>
     <description>Recent content in Microservices on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
     <lastBuildDate>Fri, 29 Jun 2018 11:03:34 +0800</lastBuildDate>
     
-	<atom:link href="https://example.org/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.masonchu.com/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>開始微服務架構</title>
-      <link>https://example.org/2018/06/start-microservices/</link>
+      <link>https://blog.masonchu.com/2018/06/start-microservices/</link>
       <pubDate>Fri, 29 Jun 2018 11:03:34 +0800</pubDate>
       
-      <guid>https://example.org/2018/06/start-microservices/</guid>
+      <guid>https://blog.masonchu.com/2018/06/start-microservices/</guid>
       <description>&lt;p&gt;決定系統往微服務架構前進。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
