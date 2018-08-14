@@ -1,33 +1,91 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>posts on Mason Chu</title>
-    <link>https://masonchu.github.io/post/</link>
-    <description>Recent content in posts on Mason Chu</description>
+    <title>Posts on </title>
+    <link>https://example.org/post/</link>
+    <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Wed, 05 Jul 2017 12:35:25 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jul 2018 09:56:18 +0800</lastBuildDate>
     
-	<atom:link href="https://masonchu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.org/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>在本機安裝 Minikube</title>
+      <link>https://example.org/2018/07/install-minikube-locally/</link>
+      <pubDate>Tue, 03 Jul 2018 09:56:18 +0800</pubDate>
+      
+      <guid>https://example.org/2018/07/install-minikube-locally/</guid>
+      <description>&lt;p&gt;minikube 是 kubernetes 社群推出的的一個輕量型工具，用於在本地端建置模擬 kubernetes 功能。minikube 支援以下幾種 vm driver。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>移轉到 golang 的改變</title>
+      <link>https://example.org/2018/06/move-to-goland/</link>
+      <pubDate>Fri, 29 Jun 2018 12:49:40 +0800</pubDate>
+      
+      <guid>https://example.org/2018/06/move-to-goland/</guid>
+      <description>&lt;p&gt;2017 跳脫待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是受夠了在 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>開始微服務架構</title>
+      <link>https://example.org/2018/06/start-microservices/</link>
+      <pubDate>Fri, 29 Jun 2018 11:03:34 +0800</pubDate>
+      
+      <guid>https://example.org/2018/06/start-microservices/</guid>
+      <description>&lt;p&gt;決定系統往微服務架構前進。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cobra 強大的 Golang 命令列工具</title>
+      <link>https://example.org/2018/06/golang-cobra/</link>
+      <pubDate>Wed, 27 Jun 2018 12:49:40 +0800</pubDate>
+      
+      <guid>https://example.org/2018/06/golang-cobra/</guid>
+      <description>&lt;p&gt;Cobra 是一套可以快速可以快速建立 golang CLI 工具的套件。在 golang 的生態圈內到處都可以看到相關的痕跡。最有名的包含 docker, k8s 都使用 cobra 處理 CLI 介面。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用 GVM 管理 go 版本</title>
+      <link>https://example.org/2018/06/gvm-go-version/</link>
+      <pubDate>Mon, 25 Jun 2018 14:54:21 +0800</pubDate>
+      
+      <guid>https://example.org/2018/06/gvm-go-version/</guid>
+      <description>&lt;p&gt;GVM 是一套管理 golang 版本的套件，類似於 nodeJS / nvm。
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>安裝和啟用 NSQ 服務</title>
+      <link>https://example.org/2018/06/install-and-start-nsq/</link>
+      <pubDate>Thu, 21 Jun 2018 15:53:16 +0800</pubDate>
+      
+      <guid>https://example.org/2018/06/install-and-start-nsq/</guid>
+      <description>安裝 NSQ 在本機測試環境 NSQ 本身有提供 brew / docker 版本。在這邊我是直接使用 github 原始碼下載編譯，注意 golang 1.7+ 並且已經有 dep 套件管理。在 test.sh 會執行 golang test &amp;amp; 編譯出所有的可執行檔。
+下載 source code &amp;amp; 安裝相依性套件 git clone https://github.com/nsqio/nsq $GOPATH/src/github.com/nsqio/nsq cd $GOPATH/src/github.com/nsqio/nsq dep ensure  測試 &amp;amp; 編譯 ./test.sh  安裝 NSQ 安裝至 /usr/local/bin 目錄
+make install  依序啟動服務 nsqlookupd 預設監聽 http:4161 / tcp:4160，而 nsqd 啟動時自動到 nsqlookupd 註冊。
+nsqlookupd nsqd --lookupd-tcp-address=127.0.0.1:4160 nsqadmin --lookupd-http-address=127.0.0.1:4161  使用 go-nsq 發布與接受訊息 發佈環境配置 使用在 microservices 中時候，nsqd 建議並不是全部 services 共用，而是個別配置一個 localhost 的 nsqd 註冊到 nsqlookupd。</description>
+    </item>
+    
+    <item>
       <title>第一次使用 Hugo 就上手</title>
-      <link>https://masonchu.github.io/post/first-hugo/</link>
+      <link>https://example.org/2017/07/first-hugo/</link>
       <pubDate>Wed, 05 Jul 2017 12:35:25 +0800</pubDate>
       
-      <guid>https://masonchu.github.io/post/first-hugo/</guid>
-      <description>基本介紹 Hugo 是一套生成靜態頁面的工具(static site generator)。利用 Markdown 將內容跟樣式外觀完整分開，再利用生成的靜態網頁直接發佈到 server 上。般來說 markdown 語法對應樣式種類會比較少，但是相對的也是幫助在寫作的時候專注在內容而不是樣式上。
-與動態的 blog 平台比較 優點  很容易對文章內容進行 git 版控或是多人協作
- 生成的靜態網頁瀏覽速度很快，也不需要對 server 系統依賴
- 容易互相在同類型的靜態生成工具之間轉換，只要把 markdown 的文章內容帶著走就好了
-  缺點  需要熟悉 markdown , git
- 通常不會有線上編輯模式或是管理平台
- 如果想要取得流量或讀者留言需要註冊其他服務  第一次安裝 如果是 mac OS 只要執行
-brew install hugo  就可以直接安裝完成，之後進入選定好儲存檔案的目錄下
-hugo new site &amp;lt;SiteName&amp;gt;  就會建立出預設的檔案目錄
-建議第一篇 post hugo new post/my-first-post.md  建立後的 md 檔案產生在 content/post 目錄
-選擇 Theme 挑選寫作工具 常用指令 // 建立可以發佈的靜態檔案 hugo // 建立 local 端 server 連同草稿 hugo server --buildDrafts  Hugo 官網說明文件 https://gohugo.</description>
+      <guid>https://example.org/2017/07/first-hugo/</guid>
+      <description>&lt;p&gt;Hugo 是一套生成靜態頁面的工具(static site generator)。利用 Markdown 將內容跟樣式外觀完整分開，再利用生成的靜態網頁直接發佈到 server 上。般來說 markdown 語法對應樣式種類會比較少，但是相對的也是幫助在寫作的時候專注在內容而不是樣式上。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
