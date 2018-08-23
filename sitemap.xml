@@ -48,13 +48,13 @@
   </url>
   
   <url>
-    <loc>https://blog.masonchu.com/tags/golang/</loc>
+    <loc>https://blog.masonchu.com/categories/golang/</loc>
     <lastmod>2018-06-29T12:49:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.masonchu.com/categories/golang/</loc>
+    <loc>https://blog.masonchu.com/tags/golang/</loc>
     <lastmod>2018-06-29T12:49:40+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -66,13 +66,13 @@
   </url>
   
   <url>
-    <loc>https://blog.masonchu.com/tags/kubernetes/</loc>
+    <loc>https://blog.masonchu.com/categories/kubernetes/</loc>
     <lastmod>2018-07-03T09:56:18+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.masonchu.com/categories/kubernetes/</loc>
+    <loc>https://blog.masonchu.com/tags/kubernetes/</loc>
     <lastmod>2018-07-03T09:56:18+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -84,25 +84,25 @@
   </url>
   
   <url>
-    <loc>https://blog.masonchu.com/tags/microservice/</loc>
-    <lastmod>2018-06-21T15:53:16+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.masonchu.com/categories/microservice/</loc>
     <lastmod>2018-06-21T15:53:16+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blog.masonchu.com/tags/microservices/</loc>
-    <lastmod>2018-06-29T11:03:34+08:00</lastmod>
+    <loc>https://blog.masonchu.com/tags/microservice/</loc>
+    <lastmod>2018-06-21T15:53:16+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://blog.masonchu.com/categories/microservices/</loc>
+    <lastmod>2018-06-29T11:03:34+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.masonchu.com/tags/microservices/</loc>
     <lastmod>2018-06-29T11:03:34+08:00</lastmod>
     <priority>0</priority>
   </url>
