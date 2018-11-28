@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mason C&#39;s Pain in the Tech</title>
+    <title>Mason Tech Note</title>
     <link>https://blog.masonchu.com/</link>
-    <description>Recent content on Mason C&#39;s Pain in the Tech</description>
+    <description>Recent content on Mason Tech Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
     <lastBuildDate>Tue, 03 Jul 2018 09:56:18 +0800</lastBuildDate>
