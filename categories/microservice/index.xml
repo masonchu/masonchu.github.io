@@ -17,8 +17,7 @@
       <pubDate>Thu, 21 Jun 2018 15:53:16 +0800</pubDate>
       
       <guid>https://blog.masonchu.com/2018/06/install-and-start-nsq/</guid>
-      <description>&lt;p&gt;NSQ 是一套用 GO 開發的訊息傳遞系統。同樣角色時常拿來比較的對象是 rabbitMQ、kafka。
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;NSQ 是一套用 GO 開發的訊息傳遞系統。同樣角色時常拿來比較的對象是 rabbitMQ、kafka。&lt;/p&gt;</description>
     </item>
     
   </channel>

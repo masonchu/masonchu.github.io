@@ -26,9 +26,7 @@
       <pubDate>Fri, 29 Jun 2018 12:49:40 +0800</pubDate>
       
       <guid>https://blog.masonchu.com/2018/06/move-to-goland/</guid>
-      <description>&lt;p&gt;2017 跳脫待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是受夠了在 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;2017 跳脫待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是受夠了在 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -37,9 +35,7 @@
       <pubDate>Fri, 29 Jun 2018 11:03:34 +0800</pubDate>
       
       <guid>https://blog.masonchu.com/2018/06/start-microservices/</guid>
-      <description>&lt;p&gt;決定系統往微服務架構前進。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;決定系統往微服務架構前進。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -48,9 +44,7 @@
       <pubDate>Wed, 27 Jun 2018 12:49:40 +0800</pubDate>
       
       <guid>https://blog.masonchu.com/2018/06/golang-cobra/</guid>
-      <description>&lt;p&gt;Cobra 是一套可以快速可以快速建立 golang CLI 工具的套件。在 golang 的生態圈內到處都可以看到相關的痕跡。最有名的包含 docker, k8s 都使用 cobra 處理 CLI 介面。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Cobra 是一套可以快速可以快速建立 golang CLI 工具的套件。在 golang 的生態圈內到處都可以看到相關的痕跡。最有名的包含 docker, k8s 都使用 cobra 處理 CLI 介面。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -59,8 +53,7 @@
       <pubDate>Mon, 25 Jun 2018 14:54:21 +0800</pubDate>
       
       <guid>https://blog.masonchu.com/2018/06/gvm-go-version/</guid>
-      <description>&lt;p&gt;GVM 是一套管理 golang 版本的套件，類似於 nodeJS / nvm。
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;GVM 是一套管理 golang 版本的套件，類似於 nodeJS / nvm。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -69,8 +62,7 @@
       <pubDate>Thu, 21 Jun 2018 15:53:16 +0800</pubDate>
       
       <guid>https://blog.masonchu.com/2018/06/install-and-start-nsq/</guid>
-      <description>&lt;p&gt;NSQ 是一套用 GO 開發的訊息傳遞系統。同樣角色時常拿來比較的對象是 rabbitMQ、kafka。
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;NSQ 是一套用 GO 開發的訊息傳遞系統。同樣角色時常拿來比較的對象是 rabbitMQ、kafka。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -79,9 +71,7 @@
       <pubDate>Wed, 05 Jul 2017 12:35:25 +0800</pubDate>
       
       <guid>https://blog.masonchu.com/2017/07/first-hugo/</guid>
-      <description>&lt;p&gt;Hugo 是一套生成靜態頁面的工具(static site generator)。利用 Markdown 將內容跟樣式外觀完整分開，再利用生成的靜態網頁直接發佈到 server 上。般來說 markdown 語法對應樣式種類會比較少，但是相對的也是幫助在寫作的時候專注在內容而不是樣式上。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Hugo 是一套生成靜態頁面的工具(static site generator)。利用 Markdown 將內容跟樣式外觀完整分開，再利用生成的靜態網頁直接發佈到 server 上。般來說 markdown 語法對應樣式種類會比較少，但是相對的也是幫助在寫作的時候專注在內容而不是樣式上。&lt;/p&gt;</description>
     </item>
     
   </channel>

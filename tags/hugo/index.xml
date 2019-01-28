@@ -17,9 +17,7 @@
       <pubDate>Wed, 05 Jul 2017 12:35:25 +0800</pubDate>
       
       <guid>https://blog.masonchu.com/2017/07/first-hugo/</guid>
-      <description>&lt;p&gt;Hugo 是一套生成靜態頁面的工具(static site generator)。利用 Markdown 將內容跟樣式外觀完整分開，再利用生成的靜態網頁直接發佈到 server 上。般來說 markdown 語法對應樣式種類會比較少，但是相對的也是幫助在寫作的時候專注在內容而不是樣式上。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Hugo 是一套生成靜態頁面的工具(static site generator)。利用 Markdown 將內容跟樣式外觀完整分開，再利用生成的靜態網頁直接發佈到 server 上。般來說 markdown 語法對應樣式種類會比較少，但是相對的也是幫助在寫作的時候專注在內容而不是樣式上。&lt;/p&gt;</description>
     </item>
     
   </channel>
