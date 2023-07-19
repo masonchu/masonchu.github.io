@@ -40,7 +40,7 @@
 <meta property="og:site_name" content="Mason Tech Note">
 <meta property="og:description" content="Hugo tranquilpeak theme demo">
 <meta name="twitter:description" content="Hugo tranquilpeak theme demo">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="zh-tw">
 
 
 <meta name="twitter:card" content="summary">
@@ -105,17 +105,17 @@ if (!doNotTrack) {
       <header id="header" data-behavior="2">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="https://blog.masonchu.com/" aria-label="">Mason Tech Note</a>
+    <a class="header-title-link" href="https://blog.masonchu.com/" aria-label="去首頁">Mason Tech Note</a>
   </div>
   
     
       <a class="header-right-picture "
-         href="https://blog.masonchu.com/#about" aria-label="">
+         href="https://blog.masonchu.com/#about" aria-label="打開鏈接: /#about">
     
     
     
       
-        <img class="header-picture" src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png" alt="" />
+        <img class="header-picture" src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png" alt="作者的圖片" />
       
     
     </a>
@@ -126,8 +126,8 @@ if (!doNotTrack) {
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
-        <a href="https://blog.masonchu.com/#about" aria-label="">
-          <img class="sidebar-profile-picture" src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png" alt="" />
+        <a href="https://blog.masonchu.com/#about" aria-label="閱讀有關作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png" alt="作者的圖片" />
         </a>
         <h4 class="sidebar-profile-name">Mason Chu</h4>
         
@@ -141,7 +141,7 @@ if (!doNotTrack) {
     
       <i class="sidebar-button-icon fa fa-lg fa-home"></i>
       
-      <span class="sidebar-button-desc">Home</span>
+      <span class="sidebar-button-desc">首頁</span>
     </a>
   </li>
 
@@ -151,7 +151,7 @@ if (!doNotTrack) {
     
       <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
       
-      <span class="sidebar-button-desc">Categories</span>
+      <span class="sidebar-button-desc">分類</span>
     </a>
   </li>
 
@@ -161,7 +161,7 @@ if (!doNotTrack) {
     
       <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
       
-      <span class="sidebar-button-desc">Tags</span>
+      <span class="sidebar-button-desc">標籤</span>
     </a>
   </li>
 
@@ -171,7 +171,7 @@ if (!doNotTrack) {
     
       <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
       
-      <span class="sidebar-button-desc">Archives</span>
+      <span class="sidebar-button-desc">所有文章</span>
     </a>
   </li>
 
@@ -181,7 +181,7 @@ if (!doNotTrack) {
     
       <i class="sidebar-button-icon fa fa-lg fa-question"></i>
       
-      <span class="sidebar-button-desc">About</span>
+      <span class="sidebar-button-desc">關於</span>
     </a>
   </li>
 
@@ -193,7 +193,7 @@ if (!doNotTrack) {
     
       <a class="sidebar-button-link " href="https://github.com/masonchu" target="_blank" rel="noopener" title="GitHub">
     
-      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
       
       <span class="sidebar-button-desc">GitHub</span>
     </a>
@@ -203,7 +203,7 @@ if (!doNotTrack) {
     
       <a class="sidebar-button-link " href="https://stackoverflow.com/users/1053261/mason" target="_blank" rel="noopener" title="Stack Overflow">
     
-      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      <i class="sidebar-button-icon fab fa-lg fa-stack-overflow" aria-hidden="true"></i>
       
       <span class="sidebar-button-desc">Stack Overflow</span>
     </a>
@@ -224,9 +224,9 @@ if (!doNotTrack) {
                ">
         <div id="archives" class="main-content-wrap">
           <form id="filter-form" action="#">
-            <input name="date" type="text" class="form-control input--xlarge" placeholder="" autofocus="autofocus">
+            <input name="date" type="text" class="form-control input--xlarge" placeholder="搜尋日期（YYYY/MM/DD）" autofocus="autofocus">
           </form>
-          <h5 class="archive-result text-color-base text-xlarge" data-message-zero="" data-message-one="" data-message-other=""></h5>
+          <h5 class="archive-result text-color-base text-xlarge" data-message-zero="沒有找到文章" data-message-one="找到 1 篇文章" data-message-other="找到 {n} 篇文章"></h5>
 <section class="boxes">
   
     
@@ -234,7 +234,7 @@ if (!doNotTrack) {
       <h4 class="archive-title" style="text-decoration: none;">2018</h4>
       
         <ul class="archive-posts archive-month" data-date="201807">
-          <h5 class="archive-title" style="text-decoration: none;"></h5>
+          <h5 class="archive-title" style="text-decoration: none;">七月</h5>
           
             <li class="archive-post archive-day" data-date="20180703">
               <a class="archive-post-title" href="https://blog.masonchu.com/2018/07/install-minikube-locally/">在本機安裝 Minikube</a>
@@ -243,7 +243,7 @@ if (!doNotTrack) {
         </ul>
       
         <ul class="archive-posts archive-month" data-date="201806">
-          <h5 class="archive-title" style="text-decoration: none;"></h5>
+          <h5 class="archive-title" style="text-decoration: none;">六月</h5>
           
             <li class="archive-post archive-day" data-date="20180629">
               <a class="archive-post-title" href="https://blog.masonchu.com/2018/06/move-to-goland/">移轉到 golang 的改變</a>
@@ -274,7 +274,7 @@ if (!doNotTrack) {
       <h4 class="archive-title" style="text-decoration: none;">2017</h4>
       
         <ul class="archive-posts archive-month" data-date="201707">
-          <h5 class="archive-title" style="text-decoration: none;"></h5>
+          <h5 class="archive-title" style="text-decoration: none;">七月</h5>
           
             <li class="archive-post archive-day" data-date="20170705">
               <a class="archive-post-title" href="https://blog.masonchu.com/2017/07/first-hugo/">第一次使用 Hugo 就上手</a>
@@ -295,7 +295,7 @@ if (!doNotTrack) {
       <i class="fa fa-times"></i>
     </div>
     
-      <img id="about-card-picture" src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png" alt="" />
+      <img id="about-card-picture" src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png" alt="作者的圖片" />
     
     <h4 id="about-card-name">Mason Chu</h4>
     
