@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Mason Tech Note</title>
@@ -6,21 +6,9 @@
     <description>Recent content in Categories on Mason Tech Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    
-	<atom:link href="https://blog.masonchu.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 03 Jul 2018 09:56:18 +0800</lastBuildDate><atom:link href="https://blog.masonchu.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Golang</title>
-      <link>https://blog.masonchu.com/categories/golang/</link>
-      <pubDate>Fri, 29 Jun 2018 12:49:40 +0800</pubDate>
-      
-      <guid>https://blog.masonchu.com/categories/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
+      <title>kubernetes</title>
       <link>https://blog.masonchu.com/categories/kubernetes/</link>
       <pubDate>Tue, 03 Jul 2018 09:56:18 +0800</pubDate>
       
@@ -29,20 +17,20 @@
     </item>
     
     <item>
-      <title>Microservice</title>
-      <link>https://blog.masonchu.com/categories/microservice/</link>
-      <pubDate>Thu, 21 Jun 2018 15:53:16 +0800</pubDate>
+      <title>golang</title>
+      <link>https://blog.masonchu.com/categories/golang/</link>
+      <pubDate>Fri, 29 Jun 2018 12:49:40 +0800</pubDate>
       
-      <guid>https://blog.masonchu.com/categories/microservice/</guid>
+      <guid>https://blog.masonchu.com/categories/golang/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Microservices</title>
-      <link>https://blog.masonchu.com/categories/microservices/</link>
+      <title>microservice</title>
+      <link>https://blog.masonchu.com/categories/microservice/</link>
       <pubDate>Fri, 29 Jun 2018 11:03:34 +0800</pubDate>
       
-      <guid>https://blog.masonchu.com/categories/microservices/</guid>
+      <guid>https://blog.masonchu.com/categories/microservice/</guid>
       <description></description>
     </item>
     

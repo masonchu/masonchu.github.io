@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Mason Tech Note</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Posts on Mason Tech Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 03 Jul 2018 09:56:18 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.masonchu.com/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 03 Jul 2018 09:56:18 +0800</lastBuildDate><atom:link href="https://blog.masonchu.com/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在本機安裝 Minikube</title>
       <link>https://blog.masonchu.com/2018/07/install-minikube-locally/</link>
@@ -26,7 +22,7 @@
       <pubDate>Fri, 29 Jun 2018 12:49:40 +0800</pubDate>
       
       <guid>https://blog.masonchu.com/2018/06/move-to-goland/</guid>
-      <description>&lt;p&gt;2017 跳脫待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是受夠了在 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。&lt;/p&gt;</description>
+      <description>&lt;p&gt;2017 跳脫 待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是不想 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。&lt;/p&gt;</description>
     </item>
     
     <item>

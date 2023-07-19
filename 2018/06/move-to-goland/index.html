@@ -1,65 +1,98 @@
-
-
-  
-    
-  
-
-
-  
-
-
-
-
-
-  
-
 <!DOCTYPE html>
 <html lang="zh-TW">
   <head>
     
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/blog.masonchu.com\/",
+  "author": {
+    "@type": "Person",
+    "name": "Mason Chu",
+    
+    "image": "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+    
+  },
+  "name":"Mason Tech Note",
+  "description":"\u003cp\u003e2017 跳脫 待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是不想 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。\u003c\/p\u003e",
+  "url":"https:\/\/blog.masonchu.com\/2018\/06\/move-to-goland\/",
+  "keywords":"[]"
+}
+
+</script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="Hugo 0.53 with theme Tranquilpeak 0.4.3-BETA">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.115.3 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Mason Chu">
+<meta name="keywords" content="">
+<meta name="description" content="2017 跳脫 待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是不想 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。">
+
+
+<meta property="og:description" content="2017 跳脫 待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是不想 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移轉到 golang 的改變">
+<meta name="twitter:title" content="移轉到 golang 的改變">
+<meta property="og:url" content="https://blog.masonchu.com/2018/06/move-to-goland/">
+<meta property="twitter:url" content="https://blog.masonchu.com/2018/06/move-to-goland/">
+<meta property="og:site_name" content="Mason Tech Note">
+<meta property="og:description" content="2017 跳脫 待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是不想 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。">
+<meta name="twitter:description" content="2017 跳脫 待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是不想 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。">
+<meta property="og:locale" content="en">
+
+  
+    <meta property="article:published_time" content="2018-06-29T12:49:40">
+  
+  
+    <meta property="article:modified_time" content="2018-06-29T12:49:40">
+  
+  
+  
+    
+      <meta property="article:section" content="golang">
+    
+  
+  
+    
+      <meta property="article:tag" content="golang">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png">
+  <meta property="twitter:image" content="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png">
+
+
+
+
+
+
     <title>移轉到 golang 的改變</title>
-    <meta name="author" content="Mason Chu">
-    <meta name="keywords" content="">
 
     <link rel="icon" href="https://blog.masonchu.com/favicon.png">
     
 
     
-    <meta name="description" content="2017 跳脫待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是受夠了在 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。">
-    <meta property="og:description" content="2017 跳脫待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是受夠了在 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="移轉到 golang 的改變">
-    <meta property="og:url" content="/2018/06/move-to-goland/">
-    <meta property="og:site_name" content="Mason Tech Note">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Mason Tech Note">
-    <meta name="twitter:description" content="2017 跳脫待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是受夠了在 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。">
-    
-    
+
+    <link rel="canonical" href="https://blog.masonchu.com/2018/06/move-to-goland/">
 
     
-    
-
-    
-      <meta property="og:image" content="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png">
-    
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     
     
-
-    
-
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
-    
-    
-    <link rel="stylesheet" href="https://blog.masonchu.com/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    <link rel="stylesheet" href="https://blog.masonchu.com/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
     
     
 
@@ -77,7 +110,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
     
     
   </head>
@@ -87,12 +119,12 @@ if (!doNotTrack) {
       <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
-    <a class="header-title-link" href="https://blog.masonchu.com/">Mason Tech Note</a>
+    <a class="header-title-link" href="https://blog.masonchu.com/" aria-label="">Mason Tech Note</a>
   </div>
   
     
       <a class="header-right-picture "
-         href="https://blog.masonchu.com/#about">
+         href="https://blog.masonchu.com/#about" aria-label="">
     
     
     
@@ -108,7 +140,7 @@ if (!doNotTrack) {
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
-        <a href="https://blog.masonchu.com/#about">
+        <a href="https://blog.masonchu.com/#about" aria-label="">
           <img class="sidebar-profile-picture" src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png" alt="" />
         </a>
         <h4 class="sidebar-profile-name">Mason Chu</h4>
@@ -119,7 +151,7 @@ if (!doNotTrack) {
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.masonchu.com/">
+      <a class="sidebar-button-link " href="https://blog.masonchu.com/" title="Home">
     
       <i class="sidebar-button-icon fa fa-lg fa-home"></i>
       
@@ -129,7 +161,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.masonchu.com/categories">
+      <a class="sidebar-button-link " href="https://blog.masonchu.com/categories" title="Categories">
     
       <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
       
@@ -139,7 +171,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.masonchu.com/tags">
+      <a class="sidebar-button-link " href="https://blog.masonchu.com/tags" title="Tags">
     
       <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
       
@@ -149,7 +181,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.masonchu.com/archives">
+      <a class="sidebar-button-link " href="https://blog.masonchu.com/archives" title="Archives">
     
       <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
       
@@ -159,7 +191,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://blog.masonchu.com/#about">
+      <a class="sidebar-button-link " href="https://blog.masonchu.com/#about" title="About">
     
       <i class="sidebar-button-icon fa fa-lg fa-question"></i>
       
@@ -173,7 +205,7 @@ if (!doNotTrack) {
       
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://github.com/masonchu" target="_blank" rel="noopener">
+      <a class="sidebar-button-link " href="https://github.com/masonchu" target="_blank" rel="noopener" title="GitHub">
     
       <i class="sidebar-button-icon fa fa-lg fa-github"></i>
       
@@ -183,7 +215,7 @@ if (!doNotTrack) {
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://stackoverflow.com/users/1053261/mason" target="_blank" rel="noopener">
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/1053261/mason" target="_blank" rel="noopener" title="Stack Overflow">
     
       <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
       
@@ -195,16 +227,6 @@ if (!doNotTrack) {
     </ul>
     <ul class="sidebar-buttons">
       
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://blog.masonchu.com/index.xml">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
-      
-      <span class="sidebar-button-desc">RSS</span>
-    </a>
-  </li>
-
 
     </ul>
   </div>
@@ -216,19 +238,19 @@ if (!doNotTrack) {
         class="
                hasCoverMetaIn
                ">
-        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+        <article class="post" id="top">
           
           
             <div class="post-header main-content-wrap text-left">
   
-    <h1 class="post-title" itemprop="headline">
+    <h1 class="post-title">
       移轉到 golang 的改變
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-06-29T12:49:40&#43;08:00">
+      <time datetime="2018-06-29T12:49:40&#43;08:00">
         
   
   
@@ -252,38 +274,28 @@ if (!doNotTrack) {
 
 </div>
           
-          <div class="post-content markdown" itemprop="articleBody">
+          <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p>2017 跳脫待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是受夠了在 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。</p>
-
+              <p>2017 跳脫 待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是不想 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。</p>
 <blockquote>
-<p>結果這幾年微軟新 CEO 就做了不少改變，更開放也更接觸 open source，開發跟部屬環境對非 windows 的支援也更全面。我個人對於微軟這次的改變真的是非常欣賞，終於處理了 windows / office 派系問題走向開放。事實也證明結果並沒有讓微軟失去領先地位，而是藉著開發社群 &amp; 雲端創造更多收益。</p>
+<p>結果這幾年微軟新 CEO 就做了不少改變，更開放也更接觸 open source，開發跟部屬環境對非 windows 的支援也更全面。我個人對於微軟這次的改變真的是非常欣賞，終於處理了 windows / office 派系問題走向開放。事實也證明結果並沒有讓微軟失去領先地位，而是藉著 開發社群 &amp; 雲端創造更多收益。</p>
 </blockquote>
-
-<h2 id="為什麼選擇-golang">為什麼選擇 golang</h2>
-
-<p>以往都是 C# 的經驗為主，自然在挑選的時候以強型別/編譯式語言為主。大部分數據分析也顯示 go 在執行效能上比 java / C# 更高一個層級。</p>
-
+<h2 id="為什麼選擇-golang">為什麼選擇 golang</h2>
+<p>以往都是 C# 的經驗為主，自然在挑選的時候以強型別/編譯式語言為主。</p>
 <h3 id="環境部署原來可以這麼容易">環境部署原來可以這麼容易</h3>
-
-<p>可以不用安裝 .net framework，專案編譯完打包居然丟上去 server 就可以跑。而且只要一個檔案。相對應也節省下了 devops 設定 CI/CD 的繁瑣程度，尤其是當編譯出來檔案需要發佈到多台機器運行環境上的時候。</p>
-
+<p>可以不用安裝 .net framework，專案編譯完打包居然丟上去 server 就可以跑。而且只要一個檔案。相對應也節省下了 devops 設定 CI/CD 的繁瑣程度，尤其是當編譯出來檔案需要發佈到多台機器運行環境上的時候。</p>
 <blockquote>
-<p>在 docker 火熱的今天，假設開發後專案都打包成 docker 才做發佈的動作，其實就一樣享有 go 發佈的好處，可以執行於多種運行環境，而且只需要一個二進制檔案就可以上傳到多組環境。</p>
+<p>在 docker 火熱的今天，假設開發後專案都打包成 docker 才做發佈的動作，其實就一樣享有 go 發佈的好處，可以執行於多種運行環境，而且只需要一個二進制檔案就可以上傳到多組環境。</p>
 </blockquote>
-
 <h3 id="建置速度超快">建置速度超快</h3>
-
-<h3 id="用-go-開發的-專案好多">用 go 開發的專案好多</h3>
-
-<p>可以在 github 看到各種套件 / 工具都是用熟悉的語言開發，這真的是一種很讓人開心的事，雖然 90% 的情況下都不會點進去看。但是好像自己也看得懂的那種感覺，真的要體會才知道。</p>
-
+<h3 id="用-go-開發的專案好多">用 go 開發的專案好多</h3>
+<p>可以在 github 看到各種套件 / 工具都是用 熟悉的語言開發，這真的是一種很讓人開心的事，雖然 90% 的情況下都不會點進去看。但是好像自己也看得懂的那種感覺，真的要體會才知道。</p>
 <h2 id="最難以適應的部分">最難以適應的部分</h2>
-
 <h3 id="找不到相對應的套件">找不到相對應的套件</h3>
-
-<p>一開始開發還是使用 web api 的模式，這時候找習慣的對應套件並不是那麼容易，也沒有一套真正主流的 framework。當看到套件控管的部分，dep / vgo / go vendor 還有一堆，各家大神也都擁護不同的工具，真的會有一種無所適從的感覺。</p>
+<p>一開始開發還是使用 web api 的模式，這時候找習慣的對應套件並不是那麼容易，也沒有一套真正主流的 framework。當看到套件控管的部分，dep / vgo / go vendor 還有一堆，各家大神也都擁護不同的工具，真的會有一種無所適從的感覺。</p>
               
+
+
             </div>
           </div>
           <div id="post-footer" class="post-footer main-content-wrap">
@@ -301,192 +313,180 @@ if (!doNotTrack) {
               
             
             
-  <div class="post-actions-wrap">
-      <nav >
-        <ul class="post-actions post-action-nav">
-          
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.masonchu.com/2018/07/install-minikube-locally/" data-tooltip="在本機安裝 Minikube">
-              
-                  <i class="fa fa-angle-left"></i>
-                  <span class="hide-xs hide-sm text-small icon-ml"></span>
-                </a>
-            </li>
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.masonchu.com/2018/06/start-microservices/" data-tooltip="開始微服務架構">
-              
-                  <span class="hide-xs hide-sm text-small icon-mr"></span>
-                  <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-          
-        </ul>
-      </nav>
-    <ul class="post-actions post-action-share" >
-      
-        <li class="post-action hide-lg hide-md hide-sm">
-          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
-          </a>
-        </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.masonchu.com/2018/06/move-to-goland/">
-              <i class="fa fa-facebook-official"></i>
-            </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.masonchu.com/2018/06/move-to-goland/">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://blog.masonchu.com/2018/06/move-to-goland/">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
-        
-      
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
       
         <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.masonchu.com/2018/07/install-minikube-locally/" data-tooltip="在本機安裝 Minikube" aria-label=": 在本機安裝 Minikube">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml"></span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.masonchu.com/2018/06/start-microservices/" data-tooltip="開始微服務架構" aria-label=": 開始微服務架構">
+          
+              <span class="hide-xs hide-sm text-small icon-mr"></span>
+              <i class="fa fa-angle-right"></i>
+            </a>
         </li>
       
-      <li class="post-action">
-        
-          <a class="post-action-btn btn btn--default" href="#">
-        
-          <i class="fa fa-list"></i>
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.masonchu.com/2018/06/move-to-goland/" title="" aria-label="">
+          <i class="fa-facebook-official" aria-hidden="true"></i>
         </a>
       </li>
-    </ul>
-  </div>
-
-
-            
-              
-                <div id="disqus_thread">
-  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.masonchu.com/2018/06/move-to-goland/" title="" aria-label="">
+          <i class="fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://blog.masonchu.com/2018/06/move-to-goland/" title="" aria-label="">
+          <i class="fa-google-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
 </div>
-              
+
+
             
+  
+
+
           </div>
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2019 Mason Chu. 
+    &copy; 2023 Mason Chu. 
   </span>
 </footer>
 
       </div>
       <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
         
-  <div class="post-actions-wrap">
-      <nav >
-        <ul class="post-actions post-action-nav">
-          
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.masonchu.com/2018/07/install-minikube-locally/" data-tooltip="在本機安裝 Minikube">
-              
-                  <i class="fa fa-angle-left"></i>
-                  <span class="hide-xs hide-sm text-small icon-ml"></span>
-                </a>
-            </li>
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.masonchu.com/2018/06/start-microservices/" data-tooltip="開始微服務架構">
-              
-                  <span class="hide-xs hide-sm text-small icon-mr"></span>
-                  <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-          
-        </ul>
-      </nav>
-    <ul class="post-actions post-action-share" >
-      
-        <li class="post-action hide-lg hide-md hide-sm">
-          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
-          </a>
-        </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.masonchu.com/2018/06/move-to-goland/">
-              <i class="fa fa-facebook-official"></i>
-            </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.masonchu.com/2018/06/move-to-goland/">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-        
-          <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://blog.masonchu.com/2018/06/move-to-goland/">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
-        
-      
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
       
         <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.masonchu.com/2018/07/install-minikube-locally/" data-tooltip="在本機安裝 Minikube" aria-label=": 在本機安裝 Minikube">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml"></span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://blog.masonchu.com/2018/06/start-microservices/" data-tooltip="開始微服務架構" aria-label=": 開始微服務架構">
+          
+              <span class="hide-xs hide-sm text-small icon-mr"></span>
+              <i class="fa fa-angle-right"></i>
+            </a>
         </li>
       
-      <li class="post-action">
-        
-          <a class="post-action-btn btn btn--default" href="#">
-        
-          <i class="fa fa-list"></i>
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.masonchu.com/2018/06/move-to-goland/" title="" aria-label="">
+          <i class="fa-facebook-official" aria-hidden="true"></i>
         </a>
       </li>
-    </ul>
-  </div>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://blog.masonchu.com/2018/06/move-to-goland/" title="" aria-label="">
+          <i class="fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://blog.masonchu.com/2018/06/move-to-goland/" title="" aria-label="">
+          <i class="fa-google-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
 
 
       </div>
-      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.masonchu.com%2F2018%2F06%2Fmove-to-goland%2F">
-          <i class="fa fa-facebook-official"></i><span>%!(EXTRA string=Facebook)</span>
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.masonchu.com%2F2018%2F06%2Fmove-to-goland%2F" aria-label="">
+          <i class="fa-facebook-official" aria-hidden="true"></i><span></span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.masonchu.com%2F2018%2F06%2Fmove-to-goland%2F">
-          <i class="fa fa-twitter"></i><span>%!(EXTRA string=Twitter)</span>
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fblog.masonchu.com%2F2018%2F06%2Fmove-to-goland%2F" aria-label="">
+          <i class="fa-twitter" aria-hidden="true"></i><span></span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fblog.masonchu.com%2F2018%2F06%2Fmove-to-goland%2F">
-          <i class="fa fa-google-plus"></i><span>%!(EXTRA string=Google&#43;)</span>
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fblog.masonchu.com%2F2018%2F06%2Fmove-to-goland%2F" aria-label="">
+          <i class="fa-google-plus" aria-hidden="true"></i><span></span>
         </a>
       </li>
     
   </ul>
 </div>
 <div id="share-options-mask" class="share-options-mask"></div>
+
+
     </div>
     
     <div id="about">
   <div id="about-card">
     <div id="about-btn-close">
-      <i class="fa fa-remove"></i>
+      <i class="fa fa-times"></i>
     </div>
     
       <img id="about-card-picture" src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png" alt="" />
@@ -502,7 +502,7 @@ if (!doNotTrack) {
     
     
       <div id="about-card-location">
-        <i class="fa fa-map-marker"></i>
+        <i class="fa fa-map-marker-alt"></i>
         <br/>
         Taiwan
       </div>
@@ -510,172 +510,26 @@ if (!doNotTrack) {
   </div>
 </div>
 
-    <div id="algolia-search-modal" class="modal-container">
-  <div class="modal">
-    <div class="modal-header">
-      <span class="close-button"><i class="fa fa-close"></i></span>
-      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
-        <span class="searchby-algolia-text text-color-light text-small">by</span>
-        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
-      </a>
-      <i class="search-icon fa fa-search"></i>
-      <form id="algolia-search-form">
-        <input type="text" id="algolia-search-input" name="search"
-          class="form-control input--large search-input" placeholder="" />
-      </form>
-    </div>
-    <div class="modal-body">
-      <div class="no-result text-color-light text-center"></div>
-      <div class="results">
-        
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://blog.masonchu.com/2018/07/install-minikube-locally/">
-                <h3 class="media-heading">在本機安裝 Minikube</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jul 7, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>minikube 是 kubernetes 社群推出的的一個輕量型工具，用於在本地端建置模擬 kubernetes 功能。</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://blog.masonchu.com/2018/06/move-to-goland/">
-                <h3 class="media-heading">移轉到 golang 的改變</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>2017 跳脫待了 9 年的 .net 開發環境，一方面是想要挑戰自己能接觸到更多的系統架構。另一方面也是受夠了在 mac 裡面安裝 parallels，去處理開發環境限定 windows 的問題。</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://blog.masonchu.com/2018/06/start-microservices/">
-                <h3 class="media-heading">開始微服務架構</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>決定系統往微服務架構前進。</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://blog.masonchu.com/2018/06/golang-cobra/">
-                <h3 class="media-heading">Cobra 強大的 Golang 命令列工具</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>Cobra 是一套可以快速可以快速建立 golang CLI 工具的套件。在 golang 的生態圈內到處都可以看到相關的痕跡。最有名的包含 docker, k8s 都使用 cobra 處理 CLI 介面。</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://blog.masonchu.com/2018/06/gvm-go-version/">
-                <h3 class="media-heading">使用 GVM 管理 go 版本</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>GVM 是一套管理 golang 版本的套件，類似於 nodeJS / nvm。</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://blog.masonchu.com/2018/06/install-and-start-nsq/">
-                <h3 class="media-heading">安裝和啟用 NSQ 服務</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>NSQ 是一套用 GO 開發的訊息傳遞系統。同樣角色時常拿來比較的對象是 rabbitMQ、kafka。</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://blog.masonchu.com/2017/07/first-hugo/">
-                <h3 class="media-heading">第一次使用 Hugo 就上手</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jul 7, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>Hugo 是一套生成靜態頁面的工具(static site generator)。利用 Markdown 將內容跟樣式外觀完整分開，再利用生成的靜態網頁直接發佈到 server 上。般來說 markdown 語法對應樣式種類會比較少，但是相對的也是幫助在寫作的時候專注在內容而不是樣式上。</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-      </div>
-    </div>
-    <div class="modal-footer">
-      <p class="results-count text-medium"
-         data-message-zero=""
-         data-message-one=""
-         data-message-other="">
-         7 posts found
-      </p>
-    </div>
-  </div>
-</div>
+    
+
     
   
     
-    <div id="cover" style="background-image:url('https://blog.masonchu.com/images/cover.jpg');"></div>
+      
+      <div id="cover" style="background-image:url('https://blog.masonchu.com/images/cover.jpg');"></div>
+    
   
 
 
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://blog.masonchu.com/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+<script src="https://blog.masonchu.com/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
 
 
 
@@ -691,32 +545,6 @@ $(document).ready(function() {
 });
 </script>
 
-
-  
-    
-      <script>
-        var disqus_config = function () {
-          this.page.url = 'https:\/\/blog.masonchu.com\/2018\/06\/move-to-goland\/';
-          
-            this.page.identifier = '\/2018\/06\/move-to-goland\/'
-          
-        };
-        (function() {
-          
-          
-          if (window.location.hostname == "localhost") {
-            return;
-          }
-          var d = document, s = d.createElement('script');
-          var disqus_shortname = 'masonchu';
-          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
-    
-  
 
 
 

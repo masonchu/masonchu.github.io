@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kubernetes on Mason Tech Note</title>
+    <title>kubernetes on Mason Tech Note</title>
     <link>https://blog.masonchu.com/categories/kubernetes/</link>
-    <description>Recent content in Kubernetes on Mason Tech Note</description>
+    <description>Recent content in kubernetes on Mason Tech Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 03 Jul 2018 09:56:18 +0800</lastBuildDate>
-    
-	<atom:link href="https://blog.masonchu.com/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 03 Jul 2018 09:56:18 +0800</lastBuildDate><atom:link href="https://blog.masonchu.com/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在本機安裝 Minikube</title>
       <link>https://blog.masonchu.com/2018/07/install-minikube-locally/</link>
