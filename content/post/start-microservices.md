@@ -16,7 +16,7 @@ draft: false
 
 ## 前置作業
 
- 開始進行 microservices  至少要具備的基本建設。
+開始進行 microservices 至少要具備的基本建設。
 
 ### 開發相關配置
 
@@ -26,10 +26,10 @@ draft: false
    3. consul
    4. zookeeper
    5. Netflix/eureka
-2. 事件訊息 (非同步訊息) event sourcing messaging
+2. 事件訊息 (非同步訊息) event sourcing messaging
    1. kafka
    2. NSQ
-3. 訊息傳遞( 同步訊息) transport
+3. 訊息傳遞(同步訊息) transport
    1. grpc
    2. thrift
    3. http
@@ -37,7 +37,7 @@ draft: false
    1. metrics
    2. Prometheus
    3. Grafana
-5.  斷路器 Circuit Breaker
+5. 斷路器 Circuit Breaker
 6. Health Check
 7. 紀錄追蹤 Log Tracking
    1. opentracing

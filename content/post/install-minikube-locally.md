@@ -17,13 +17,13 @@ minikube 是 kubernetes 社群推出的的一個輕量型工具，用於在本�
 
 minikube 支援以下幾種 vm driver。
 
-1. virtualbox(預設值)
+1. virtualbox(預設值)
 2. vmwarefusion
 3. kvm2
 4. kvm
 5. hyperkit
 
-> 後續內容預設使用 macOS + virtualbox。
+> 後續內容預設使用 macOS + virtualbox。
 
 ## 安裝 VM
 
@@ -33,7 +33,7 @@ minikube 支援以下幾種 vm driver。
 brew install kubernetes-cli
 ```
 
- 確定安裝版本
+確定安裝版本
 
 ```text
 kubectl version
@@ -77,7 +77,7 @@ minikube dashboard
 
 用 echoserver 建立一個測試 deploy
 
-```text
+```text
 kubectl run hello-minikube --image=gcr.io/google_containers/echoserver:1.4 --port=8080
 ```
 
@@ -101,7 +101,7 @@ minikube stop && minikube start --cpus 4 --memory 8192
 
 <!-- >這並不代表 service 這樣做就可以對外公開，而是只有在 minikube 上面本機檢視。 -->
 
-## ref
+## reference
 
 <https://kubernetes.io/docs/setup/minikube/#minikube-features>
 

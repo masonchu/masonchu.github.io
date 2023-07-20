@@ -6,9 +6,9 @@ draft: true
 
 ## CDN 發佈設定
 
-如果有使用到 cdn 加速會變得比較複雜，一般發佈我們都知道只要將 `ng build` 加入參數 `--deploy-url` 就可以指定 cdn 位置。但是這個參數需要在建置時期就代入，沒辦法在 build 產生 dist 之後才去變更。
+如果有使用到 cdn 加速  會變得比較複雜， 一般發佈我們都知道只要將 `ng build` 加入參數 `--deploy-url` 就可以指定 cdn 位置。但是這個參數需要在建置時期就代入，沒辦法在 build 產生 dist 之後才去變更。
 
-## 修改根目錄 base href
+## 修改根目錄 base href
 
 ## ref
 
